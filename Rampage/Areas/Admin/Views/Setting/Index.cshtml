@@ -1,0 +1,45 @@
+﻿@model List<Setting>
+@{
+    int Count = 1;
+}
+<!-- Table Start -->
+<div class="container-fluid pt-4 px-4">
+
+    <div class="col-12">
+        <div class="bg-secondary rounded h-100 p-4">
+            <h6 class="mb-4">Ayarlar</h6>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Anahtar</th>
+                            <th scope="col">Değer</th>
+                            <th scope="col">Eylemler</th>
+                            <th scope="col"><a asp-action="Create" class="btn btn-success">Ekle</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Setting setting in Model)
+                        {
+                            <tr>
+                                <th scope="row">@(Count++)</th>
+                                <td>@setting.Key</td>
+                                <td>@setting.Value</td>
+                                <td>
+                                    <a asp-action="Update" asp-route-id="@setting.Id" class="btn btn-warning">Değiştir</a>
+                                </td>
+                            </tr>
+
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<!-- Table End -->
+<!-- Content End -->

@@ -1,0 +1,39 @@
+﻿@model Blog
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+
+        <div class="col-sm-12 col-xl-12">
+            <div class="card">
+                <div style="background-color:red;color:white" class="card-header">
+                    @Model.Name
+                </div>
+                <div style="background-color:black" class="card-body">
+                    <div style="display:flex;flex-direction:column;justify-content:space-between">
+                        <p>
+
+                            Resim:  <img style="width:100px;height:100px" src="@Model.ImagePath" />
+                        </p>
+               
+                    </div>
+                    <br />
+
+
+
+                    Kategori:@Model.BlogCategory.Name
+              
+
+
+                    <br />
+
+                    Description: @Model.Description
+
+
+
+                    <a asp-action="Index" class="btn btn-primary">Geri</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

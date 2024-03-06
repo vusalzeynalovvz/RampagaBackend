@@ -1,0 +1,108 @@
+﻿@model ProductPostVM
+
+
+<!-- Form Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+
+        <div class="col-sm-12 col-xl-6">
+            <form style="margin:auto" method="post" enctype="multipart/form-data" class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Ürün ekle</h6>
+                <div class="form-floating mb-3">
+                    <input asp-for="Name" class="form-control" id="floatingInput"
+                           placeholder="Kategori adı girin">
+                    <label for="floatingInput">Ad</label>
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+
+
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Price" class="form-control" id=""
+                           placeholder="Fiyat girin">
+                    <label for="floatingInput">Fiyat</label>
+                    <span class="text-danger" asp-validation-for="Price"></span>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Count" class="form-control" id="floatingInput"
+                           placeholder="Adet girin">
+                    <label for="floatingInput">Adet</label>
+                    <span class="text-danger" asp-validation-for="Count"></span>
+                </div>
+
+
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Barcode" class="form-control" id="floatingInput"
+                           placeholder="Barkod girin">
+                    <label for="floatingInput">Barkod</label>
+                    <span class="text-danger" asp-validation-for="Barcode"></span>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <input asp-for="BaseImage" accept="image/*" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Ana Resim</label>
+                    <span class="text-danger" asp-validation-for="BaseImage"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="BGImage" accept="image/*" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Arka Plan Resmi</label>
+                    <span class="text-danger" asp-validation-for="BGImage"></span>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Images" accept="image/*" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Diğer resimler</label>
+                    <span class="text-danger" asp-validation-for="Images"></span>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <select class="form-select" asp-for="CategoryId" id="floatingSelect"
+                            aria-label="Floating label select example">
+                        <option value="@null" disabled selected>Kategori seçin</option>
+                        @foreach (Category category in ViewBag.Categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+
+                        }
+
+                    </select>
+                    <label for="floatingSelect">Kategori</label>
+                    <span class="text-danger" asp-validation-for="CategoryId"></span>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <select class="form-select" asp-for="ColorId" id="floatingSelect"
+                            aria-label="Floating label select example">
+                        <option value="@null" disabled selected>Renk seçin</option>
+                        @foreach (Color color in ViewBag.Colors)
+                        {
+                            <option value="@color.Id">@color.Name</option>
+
+                        }
+
+                    </select>
+                    <label for="floatingSelect">Renk</label>
+                    <span class="text-danger" asp-validation-for="ColorId"></span>
+                </div>
+    
+
+               
+
+                <button class="btn btn-primary">Ekle</button>
+                <a asp-action="Index" class="btn btn-secondary">Geri</a>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!-- Form End -->
+        </div>
+<!-- Content End -->

@@ -1,0 +1,93 @@
+﻿@model Product
+@{
+    int Count = 1;
+    int PCount = 1;
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+
+        <div class="col-sm-12 col-xl-12">
+            <div class="card">
+                <div style="background-color:red;color:white" class="card-header">
+                    @Model.Name
+                </div>
+                <div style="background-color:black" class="card-body">
+                    <div style="display:flex;flex-direction:column;justify-content:space-between">
+                        <p>
+
+                            Resim:  <img style="width:100px;height:100px" src="@Model.BaseImagePath" />
+                        </p>
+                        <p>
+
+                            Arka plan resmi:  <img style="width:100px;height:100px" src="@Model.BGImagePath" />
+                        </p>
+                        <p>
+
+                            Diğer resimler: @foreach (var image in Model.ProductImages)
+                            {
+                                <img style="width:100px;height:100px" src="@image.ImagePath" />
+                            }
+                        </p>
+
+                    </div>
+                    <br />
+
+                    Kategori:@Model.Category.Name
+                    <br/>
+
+                    Renk:@Model.Color.Name
+                    <br />
+                    <br />
+
+
+
+
+                            <h3>
+                                Infolar:
+                            </h3>
+                            <br />
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Anahtar</th>
+                                        <th scope="col">Değer</th>
+                                        <th scope="col">Sil</th>
+                                        <th scope="col">
+                                            <a asp-action="CreateInfo" asp-route-id="@Model.Id" class="btn btn-success">Ekle</a>
+
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var info in Model.ProductInfos)
+                                    {
+                                        <tr>
+                                            <th scope="row">@(Count++)</th>
+                                            <td>@info.Key</td>
+                                            <td>@info.Value</td>
+                                            <td>
+                                                <a asp-action="DeleteInfo" asp-route-id="@info.Id" class="btn btn-danger">Sil</a>
+
+
+
+
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                    
+
+
+                    <a asp-action="Index" class="btn btn-primary">Geri</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

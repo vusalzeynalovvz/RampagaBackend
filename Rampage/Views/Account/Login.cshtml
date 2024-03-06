@@ -1,0 +1,45 @@
+﻿@model LoginVM
+<main>
+
+
+    <style>
+
+        button {
+            padding: 20px 45px;
+            color: gray;
+            border: 1px solid red;
+            width: max-content;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+
+            button:hover {
+                cursor: pointer;
+                background-color: red;
+                color: #f8f9fa;
+            }
+    </style>
+    <section class="bg-image-login">
+    </section>
+
+    <section class="login">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" style="color:red"> </div>
+            <div class="login-email">
+                <input asp-for="Email" type="email" placeholder="E-posta">
+                <span style="color:red" asp-validation-for="Email"> </span>
+            </div>
+            <div class="login-password">
+                <input asp-for="Password" type="password" placeholder="Şifre">
+                <span style="color:red" asp-validation-for="Password"> </span>
+            </div>
+            <div class="enter">
+                <button type="submit"> Giriş yap</button>
+            </div>
+            <div class="register">
+                <a asp-action="Register"> Hesabın yokmu? Kaydol</a>
+            </div>
+        </form>
+    </section>
+</main>

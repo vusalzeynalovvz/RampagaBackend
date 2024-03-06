@@ -1,0 +1,72 @@
+﻿@model BlogCategory
+@{
+    int Count = 1;
+    int PCount = 1;
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+
+        <div class="col-sm-12 col-xl-12">
+            <div class="card">
+                <div style="background-color:red;color:white" class="card-header">
+                    @Model.Name
+                </div>
+                <div style="background-color:black" class="card-body">
+                   
+                    <br />
+                    <br />
+
+         
+
+
+                    @{
+                        if (Model.Blogs.Count > 0)
+                        {
+
+                            <h3>
+                                Bloglar:
+                            </h3>
+                            <br />
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Resim</th>
+                                        <th scope="col">Adı</th>
+                                        <th scope="col">Eylemler</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (Blog blog in Model.Blogs)
+                                    {
+                                        <tr>
+                                            <th scope="row">@(PCount++)</th>
+                                            <td> <img style="width:50px;height:50px;border-radius:100%" src="@blog.ImagePath" />  </td>
+                                            <td>@blog.Name</td>
+                                            <td>
+                                                <a asp-action="Detail" asp-controller="Blog" asp-route-id="@blog.Id" class="btn btn-info">Info</a>
+                                                <a asp-action="Update" asp-controller="Blog" asp-route-id="@blog.Id" class="btn btn-warning">Değiştir</a>
+                                                <a asp-action="Delete" asp-controller="Blog" asp-route-id="@blog.Id" class="btn btn-danger">Sil</a>
+
+
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        }
+                    }
+
+
+
+                    <a asp-action="Index" class="btn btn-primary">Geri</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

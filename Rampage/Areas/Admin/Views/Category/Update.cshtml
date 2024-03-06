@@ -1,0 +1,57 @@
+﻿@model CategoryPutVM
+
+
+<!-- Form Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+
+        <div class="col-sm-12 col-xl-6">
+            <form style="margin:auto" method="post" enctype="multipart/form-data" class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Kategori ekle</h6>
+                <div class="form-floating mb-3">
+                    <input asp-for="Name" class="form-control" id="floatingInput"
+                           placeholder="Kategori adı girin">
+                    <label for="floatingInput">Ad</label>
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+
+                <img src="@Model.ImagePath" style="height:100px;width:100px" />
+                <div class="form-floating mb-3">
+                    <input asp-for="ImagePath" type="hidden" />
+                    <input asp-for="Image" class="form-control" id="floatingInput" accept="image/*">
+                    <label for="floatingInput">Resim</label>
+                    <span class="text-danger" asp-validation-for="Image"></span>
+                </div>
+
+                <img src="@Model.BGImagePath" style="height:100px;width:100px" />
+                <div class="form-floating mb-3">
+                    <input asp-for="BGImagePath" type="hidden" />
+                    <input asp-for="BGImage" class="form-control" accept="image/*" id="floatingInput">
+                    <label for="floatingInput">Arka Plan Resmi</label>
+                    <span class="text-danger" asp-validation-for="BGImage"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select class="form-select" asp-for="ParentCategoryId" id="floatingSelect"
+                            aria-label="Floating label select example">
+                        <option value="@null" selected>Üst Kategorisi olmasın</option>
+                        @foreach (Category category in ViewBag.Categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+
+                        }
+
+                    </select>
+                    <label for="floatingSelect">Üst Kategori</label>
+                    <span class="text-danger" asp-validation-for="ParentCategoryId"></span>
+                </div>
+                <button class="btn btn-warning">Değiştir</button>
+                <a asp-action="Index" class="btn btn-secondary">Geri</a>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!-- Form End -->
+        </div>
+<!-- Content End -->

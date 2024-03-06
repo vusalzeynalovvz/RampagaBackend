@@ -1,0 +1,534 @@
+﻿@model HomeVM
+<!-- Main Start  -->
+<main>
+    <section>
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="slider-image-index" src="~/assets/image/download.jpg" alt="">
+                    <div class="slider-text">
+                        <span>BLINK</span>
+                        <h3>BLINK YAKINDA STOKLARDA!</h3>
+                        <p>
+                            Rampage BLINK mouse 4 Farklı renk seçenekleri ve tarzınıza uygun ekstra söküp takılabilen
+                            avuç içi desteği kutu içeriğinde sunuluyor.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="slider-image-index" src="~/assets/image/sliderphoto.jpg" alt="">
+                    <div class="slider-text">
+                        <span>FORCE V995</span>
+                        <h3>GERÇEK SÜRÜŞ DENEYİMİ</h3>
+                        <p>
+                            Rampage FORCE V995, her türlü yarış oyunu için tasarlanmış dinamik bir direksiyon
+                            setidir. Kusursuz sürüş deneyimi için tasarlanan FORCE V995
+                            gerçek bir araba hissi ile hızlanmanızı, fren yapmanızı ve vites değiştirmenizi sağlar.
+                            PS4/PC/XBOX ONE/Xbox Series S/X için uygundur.
+                        </p>
+                        <div class="slider-btn">
+                            <a href="#">Alışverişe Başla</a>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="slider-image-index" src="~/assets/image/download.png" alt="">
+                    <div class="slider-text">
+                        <span>CRACK H11</span>
+                        <h3>OYUNLARDA ÖZGÜRLÜĞÜN TADINI ÇIKAR</h3>
+                        <p>
+                            Oyunlarda performansınızı üst seviyeye taşımanız için kablosuz ve ultra hafif tasarlandı.
+                        </p>
+                        <div class="slider-btn">
+                            <a href="#">Keşfet </a>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-shop">
+        <div class="swiper corusel">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="shop-flex">
+                        <div class="shop-title">
+                            <h2>Kulaklık ve Mikrofon</h2>
+                        </div>
+                        <div class="shop-image">
+                            <span>1</span>
+                            <img src="~/assets/image/kulaklikcategories.png" alt="Kulaklik ve Mikrofon">
+                        </div>
+                        <a href="#">
+                            <p>Keşfet</p> <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="shop-flex">
+                        <div class="shop-title">
+                            <h2>Klavye</h2>
+                        </div>
+                        <div class="shop-image">
+                            <span>2</span>
+                            <img src="~/assets/image/categoriesklavye.png" alt="Kulaklik ve Mikrofon">
+                        </div>
+                        <a href="#">
+                            <p>Keşfet</p> <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="shop-flex">
+                        <div class="shop-title">
+                            <h2>Monitör</h2>
+                        </div>
+                        <div class="shop-image">
+                            <span>3</span>
+                            <img src="~/assets/image/categoriesMonitor.png" alt="Kulaklik ve Mikrofon">
+                        </div>
+                        <a href="#">
+                            <p>Keşfet</p> <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="shop-flex">
+                        <div class="shop-title">
+                            <h2>Mouse</h2>
+                        </div>
+                        <div class="shop-image">
+                            <span>4</span>
+                            <img src="~/assets/image/categoriesMouse.png" alt="Kulaklik ve Mikrofon">
+                        </div>
+                        <a href="#">
+                            <p>Keşfet</p> <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="shop-flex">
+                        <div class="shop-title">
+                            <h2>Kasa</h2>
+                        </div>
+                        <div class="shop-image">
+                            <span>5</span>
+                            <img src="~/assets/image/categoriesKasa.png" alt="Kulaklik ve Mikrofon">
+                        </div>
+                        <a href="#">
+                            <p>Keşfet</p> <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="power-slider">
+        <div class="power-slider-header">
+            <div class="power-slider-title">
+                <span>SENİN İÇİN</span>
+                <h2>Güç, Güvenlik ve Performans.</h2>
+            </div>
+            <div class="power-slider-categories">
+                <span class="power-slider-categori1">Popüler Ürünler</span>
+                <span class="power-slider-categori2">Sizin İçin Seçtiklerimiz</span>
+                <span class="power-slider-categori3">Son Eklenenler</span>
+            </div>
+        </div>
+        <div class="power-slider-boxs1 active">
+            <div class="power-slider-box1">
+                <img src="~/assets/image/for-youMouse.jpg" alt="Mouse">
+            </div>
+            <div class="power-slider-box2">
+                <div class="swiper foryou">
+                    <div class="swiper-wrapper">
+                        @foreach (var product in Model.PopularProducts)
+                        {
+                            <div class="swiper-slide">
+                                <div class="product-box-swipper">
+                                    <div class="product-title">
+                                        <span>@product.Name</span>
+                                    </div>
+                                    <div class="product-image">
+                                        <img src="@product.BaseImagePath" alt="">
+                                    </div>
+                                    <div class="total-rating">
+                                        <div class="total-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span>5</span>
+                                        <p>2</p>
+                                    </div>
+                                    <div class="product-price">
+                                        <span>@product.Price TL</span>
+                                    </div>
+                                    <div class="product-add-basket">
+                                        <div>
+                                            <a href="#">Sepete Ekle</a>
+                                            <span>+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="power-slider-boxs2 active">
+            <div class="power-slider-box1">
+                <img src="~/assets/image/diger_resim4.jpg" alt="Mouse">
+            </div>
+            <div class="power-slider-box2">
+                <div class="swiper foryou">
+                    <div class="swiper-wrapper">
+                        @foreach (var product in Model.SpecialProducts)
+                        {
+                            <div class="swiper-slide">
+                                <div class="product-box-swipper">
+                                    <div class="product-title">
+                                        <span>@product.Name</span>
+                                    </div>
+                                    <div class="product-image">
+                                        <img src="@product.BaseImagePath" alt="">
+                                    </div>
+                                    <div class="total-rating">
+                                        <div class="total-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span>5</span>
+                                        <p>2</p>
+                                    </div>
+                                    <div class="product-price">
+                                        <span>@product.Price TL</span>
+                                    </div>
+                                    <div class="product-add-basket">
+                                        <div>
+                                            <a href="#">Sepete Ekle</a>
+                                            <span>+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>>
+        </div>
+        <div class="power-slider-boxs3 active">
+            <div class="power-slider-box1">
+                <img src="~/assets/image/diger_resim5.jpg" alt="Mouse">
+            </div>
+            <div class="power-slider-box2">
+                <div class="swiper foryou">
+                    <div class="swiper-wrapper">
+                        @foreach (var product in Model.NewProducts)
+                        {
+                            <div class="swiper-slide">
+                                <div class="product-box-swipper">
+                                    <div class="product-title">
+                                        <span>@product.Name</span>
+                                    </div>
+                                    <div class="product-image">
+                                        <img src="@product.BaseImagePath" alt="">
+                                    </div>
+                                    <div class="total-rating">
+                                        <div class="total-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span>5</span>
+                                        <p>2</p>
+                                    </div>
+                                    <div class="product-price">
+                                        <span>@product.Price TL</span>
+                                    </div>
+                                    <div class="product-add-basket">
+                                        <div>
+                                            <a href="#">Sepete Ekle</a>
+                                            <span>+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="card-toggle-section">
+        <div class="card-toggle-category">
+            <span>ÜRÜN VİTRİNİ</span>
+            <div class="card-category">
+                @for (int i = 0; i < Model.Categories.Count; i++)
+                {
+                    <span class="category-menu@(i+1)">@Model.Categories[i].Name</span>
+
+                }
+            </div>
+        </div>
+        @for (int i = 0; i < Model.Categories.Count; i++)
+        {
+            <div class="category-cards@(i+1)">
+                @foreach (var product in Model.Categories[i].Products)
+                {
+                    <div class="category-card">
+                        <h2>@product.Name</h2>
+                        <div class="category-image">
+                            <img src="@product.BaseImagePath" alt="">
+                        </div>
+                        <p>@product.Price</p>
+                        <div class="category-add-basket">
+                            <span>Sepete Ekle</span>
+                            <p>+</p>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+        }
+    </section>
+    <section class="user-comment">
+        <div class="user-comment-title">
+            <p>Kullanıcı Deneyimleri</p>
+            <span>Kullanıcılarımızdan Yorumlar</span>
+        </div>
+        <div class="user-comment-boxs">
+            <div class="swiper user-comment-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="user-comment-box">
+                            <span>
+                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
+                                Gaming Oyuncu Kasası
+                            </span>
+                            <div class="user-comment-image">
+                                <img src="~/assets/image/usercommentimage1.png" alt="Kasa">
+                            </div>
+                            <div class="user-comment-text">
+                                <div class="user-name-date">
+                                    <div class="user-name">SERTAÇ Güngör</div>
+                                    <div class="user-date">21/11/2023</div>
+                                </div>
+                                <div class="user-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p>
+                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
+                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
+                                    serin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="user-comment-box">
+                            <span>
+                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
+                                Gaming Oyuncu Kasası
+                            </span>
+                            <div class="user-comment-image">
+                                <img src="~/assets/image/usermouse.png" alt="Kasa">
+                            </div>
+                            <div class="user-comment-text">
+                                <div class="user-name-date">
+                                    <div class="user-name">SERTAÇ Güngör</div>
+                                    <div class="user-date">21/11/2023</div>
+                                </div>
+                                <div class="user-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p>
+                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
+                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
+                                    serin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="user-comment-box">
+                            <span>
+                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
+                                Gaming Oyuncu Kasası
+                            </span>
+                            <div class="user-comment-image">
+                                <img src="~/assets/image/userdireksiyon.png" alt="Kasa">
+                            </div>
+                            <div class="user-comment-text">
+                                <div class="user-name-date">
+                                    <div class="user-name">SERTAÇ Güngör</div>
+                                    <div class="user-date">21/11/2023</div>
+                                </div>
+                                <div class="user-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p>
+                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
+                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
+                                    serin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="user-comment-box">
+                            <span>
+                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
+                                Gaming Oyuncu Kasası
+                            </span>
+                            <div class="user-comment-image">
+                                <img src="~/assets/image/usercommentimage1.png" alt="Kasa">
+                            </div>
+                            <div class="user-comment-text">
+                                <div class="user-name-date">
+                                    <div class="user-name">SERTAÇ Güngör</div>
+                                    <div class="user-date">21/11/2023</div>
+                                </div>
+                                <div class="user-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p>
+                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
+                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
+                                    serin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="user-comment-box">
+                            <span>
+                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
+                                Gaming Oyuncu Kasası
+                            </span>
+                            <div class="user-comment-image">
+                                <img src="~/assets/image/usercommentimage1.png" alt="Kasa">
+                            </div>
+                            <div class="user-comment-text">
+                                <div class="user-name-date">
+                                    <div class="user-name">SERTAÇ Güngör</div>
+                                    <div class="user-date">21/11/2023</div>
+                                </div>
+                                <div class="user-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p>
+                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
+                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
+                                    serin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Main End  -->
+<!-- Footer Start -->
+<footer>
+    <div class="footer-all">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="~/assets/image/rampage-logo (1).svg" alt="Rampage logo">
+            </div>
+            <div class="footer-email">
+                <a href="#">info@rampage.com.tr</a>
+            </div>
+            <div class="footer-send-email">
+                <div class="buttons">
+                    <span>Katıl</span>
+                    <span>Ayrıl</span>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="eposta" placeholder="E-posta Adresiniz">
+                </div>
+                <div class="send-email">
+                    <button>Gönder</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-mid">
+            <div class="links">
+                <a href="about.html">Hakkımızda </a>
+                <a href="#">Destek </a>
+                <a href="contact.html">İletişim </a>
+                <a href="blog.html">Bloglar</a>
+            </div>
+            <div class="social-icons">
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+            <div class="policys">
+                <a href="#">Gizlilik ve Çerez Politikası</a>
+                <a href="#">KVKK ve Aydınlatma Metni</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2024 RAMPAGE</span>
+            <p>TR/GLOBAL</p>
+            <p>Web Tasarim By Vusaal</p>
+        </div>
+    </div>
+</footer>
+<!-- Footer Start -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+

@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome cdn Strt -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome cdn end -->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Demo styles -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/about.css">
+    <link rel="stylesheet" href="~/assets/css/basket.css">
+    <link rel="stylesheet" href="~/assets/css/blog.css">
+    <link rel="stylesheet" href="~/assets/css/contact.css">
+    <link rel="stylesheet" href="~/assets/css/login.css">
+    <link rel="stylesheet" href="~/assets/css/register.css">
+    <link rel="stylesheet" href="~/assets/css/shop.css">
+    <link rel="stylesheet" href="~/assets/css/shopdetail.css">
+    <link rel="stylesheet" href="~/assets/css/userpage.css">
+    <title>Rampage</title>
+</head>
+
+<body>
+    <!-- Header Sections Start -->
+    <header class="header">
+        <nav>
+            <div class="menu">
+                <i id="shop-menu" class="fa-solid fa-bars"></i>
+            </div>
+            <div class="logo">
+                <img src="~/assets/image/rampage-logo (1).svg" alt="Rampage Logo">
+            </div>
+            <ul>
+                <li style="cursor: pointer;">
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Giris yap</span>
+                    </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-truck"></i>
+                </li>
+                <li class="basket_click">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="quantity">1</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-magnifying-glass search-open-icon"></i>
+                </li>
+            </ul>
+            <div class="basket-container">
+
+                <div class="basket-content" id="cart_list">
+                    <p class="">
+                        Sepet
+                        <svg id="" class="close-btn close_btn_click  snipcss0-2-2-3" xmlns="http://www.w3.org/2000/svg"
+                             width="22.707" height="22.712" viewBox="0 0 22.707 22.712">
+                            <g transform="translate(-40.647 -836.142)" class="snipcss0-3-3-4">
+                                <line x1="21.5" y2="20.981" transform="translate(41.5 836.5)">
+                                </line>
+                                <line x2="22" y2="21.981" transform="translate(41 836.519)">
+                                </line>
+                            </g>
+                        </svg>
+                    </p>
+                    <div class="b-product-list ">
+                        <div class="product-item snipcss0-2-5-6">
+                            <div class="delete snipcss0-3-6-7" onclick="delete_from_cart(20500);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11.583" height="11.583"
+                                     viewBox="0 0 11.583 11.583" class="snipcss0-4-7-8">
+                                    <g transform="translate(-7.783 -7.783)" class="snipcss0-5-8-9">
+                                        <path d="M9.2,17.952,17.952,9.2" transform="translate(0 0)">
+                                        </path>
+                                        <path d="M9.2,9.2l8.755,8.755" transform="translate(0 0)">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <a href="tr/urun/rampage-v902-ps3-ps4-pc-xboxone-xbox360-switch-3-pedalli-el-vitesli-gaming-oyuncu-direksiyonu"
+                               class="snipcss0-3-6-10">
+                                <img src="https://www.rampage.com.tr/rampage2/dosyalar/urun/698/4146_k.png?m=1684664665"
+                                     alt="Rampage V902 PS3/PS4/PC/XBOXONE/XBOX360 /SWITCH 3 Pedallı -El Vitesli Gaming Oyuncu Direksiyonu"
+                                     class="snipcss0-4-10-11">
+                            </a>
+                            <div class="num snipcss0-3-6-12">
+                                36891
+                            </div>
+                            <a href="tr/urun/rampage-v902-ps3-ps4-pc-xboxone-xbox360-switch-3-pedalli-el-vitesli-gaming-oyuncu-direksiyonu"
+                               class="p-name snipcss0-3-6-13">
+                                Rampage V902 PS3/PS4/PC/XBOXONE/XBOX360 /SWITCH 3 Pedallı -El Vitesli Gaming Oyuncu
+                                Direksiyonu
+                            </a>
+                            <div class="qty snipcss0-3-6-14">
+                                <div class="qty-plus snipcss0-4-14-15">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
+                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-15-16">
+                                        <path d="M126.7,8.011,118.864.192a.657.657,0,0,0-.928.931l7.375,7.354-7.375,7.354a.657.657,0,0,0,.928.93L126.7,8.942a.657.657,0,0,0,0-.93Z"
+                                              transform="translate(-117.742 0)" fill="#fff">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="piece snipcss0-4-14-17">
+                                    <input type="number" step="1" name="adet" value="1" data-update-qty="20500" min="1"
+                                           class="snipcss0-5-17-18">
+                                    <span class="snipcss0-5-17-19">
+                                        Adet
+                                    </span>
+                                </div>
+                                <div class="qty-minus snipcss0-4-14-20">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
+                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-20-21">
+                                        <path d="M8.963,8.942l-7.841,7.82a.657.657,0,0,1-.928-.931L7.568,8.477.193,1.122a.657.657,0,0,1,.928-.93L8.963,8.011a.657.657,0,0,1,0,.93Z"
+                                              transform="translate(0)" fill="#fff">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="price snipcss0-3-6-22">
+                                <p class="snipcss0-4-22-23">
+                                    6.999,00 TL
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product-item snipcss0-2-5-24">
+                            <div class="delete snipcss0-3-24-25" onclick="delete_from_cart(20503);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11.583" height="11.583"
+                                     viewBox="0 0 11.583 11.583" class="snipcss0-4-25-26">
+                                    <g transform="translate(-7.783 -7.783)" class="snipcss0-5-26-27">
+                                        <path d="M9.2,17.952,17.952,9.2" transform="translate(0 0)">
+                                        </path>
+                                        <path d="M9.2,9.2l8.755,8.755" transform="translate(0 0)">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <a href="tr/urun/rampage-drive-rs-ps4-pc-xbox-one-xbox-series-s-x-yayli-3-pedal-el-vitesi-gaming-oyun-direksiyonu"
+                               class="snipcss0-3-24-28">
+                                <img src="https://www.rampage.com.tr/rampage2/dosyalar/urun/754/7867_k.png?m=1691832366"
+                                     alt="Rampage DRIVE RS+ PS4/PC/XBOX ONE/Xbox Series S/X Yaylı 3 Pedal -El Vitesi Gaming Oyun Direksiyonu"
+                                     class="snipcss0-4-28-29">
+                            </a>
+                            <div class="num snipcss0-3-24-30">
+                                37616
+                            </div>
+                            <a href="tr/urun/rampage-drive-rs-ps4-pc-xbox-one-xbox-series-s-x-yayli-3-pedal-el-vitesi-gaming-oyun-direksiyonu"
+                               class="p-name snipcss0-3-24-31">
+                                Rampage DRIVE RS+ PS4/PC/XBOX ONE/Xbox Series S/X Yaylı 3 Pedal -El Vitesi Gaming Oyun
+                                Direksiyonu
+                            </a>
+                            <div class="qty snipcss0-3-24-32">
+                                <div class="qty-plus snipcss0-4-32-33">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
+                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-33-34">
+                                        <path d="M126.7,8.011,118.864.192a.657.657,0,0,0-.928.931l7.375,7.354-7.375,7.354a.657.657,0,0,0,.928.93L126.7,8.942a.657.657,0,0,0,0-.93Z"
+                                              transform="translate(-117.742 0)" fill="#fff">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="piece snipcss0-4-32-35">
+                                    <input type="number" step="1" name="adet" value="1" data-update-qty="20503" min="1"
+                                           class="snipcss0-5-35-36">
+                                    <span class="snipcss0-5-35-37">
+                                        Adet
+                                    </span>
+                                </div>
+                                <div class="qty-minus snipcss0-4-32-38">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
+                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-38-39">
+                                        <path d="M8.963,8.942l-7.841,7.82a.657.657,0,0,1-.928-.931L7.568,8.477.193,1.122a.657.657,0,0,1,.928-.93L8.963,8.011a.657.657,0,0,1,0,.93Z"
+                                              transform="translate(0)" fill="#fff">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="price snipcss0-3-24-40">
+                                <p class="snipcss0-4-40-41">
+                                    11.399,00 TL
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product-item snipcss0-2-5-42">
+                            <div class="delete snipcss0-3-42-43" onclick="delete_from_cart(20504);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11.583" height="11.583"
+                                     viewBox="0 0 11.583 11.583" class="snipcss0-4-43-44">
+                                    <g transform="translate(-7.783 -7.783)" class="snipcss0-5-44-45">
+                                        <path d="M9.2,17.952,17.952,9.2" transform="translate(0 0)">
+                                        </path>
+                                        <path d="M9.2,9.2l8.755,8.755" transform="translate(0 0)">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <a href="tr/urun/rampage-v900-s-ps3-ps4-pc-xboxone-xbox360-switch-6-in-1-pedalli-gaming-oyuncu-direksiyonu"
+                               class="snipcss0-3-42-46">
+                                <img src="https://www.rampage.com.tr/rampage2/dosyalar/urun/311/4729_k.png?m=1684663866"
+                                     alt="Rampage V900-S PS3/PS4/PC/XBOXONE/XBOX360 SWITCH 6 in 1 Pedallı Gaming Oyuncu Direksiyonu"
+                                     class="snipcss0-4-46-47">
+                            </a>
+                            <div class="num snipcss0-3-42-48">
+                                32939
+                            </div>
+                            <a href="tr/urun/rampage-v900-s-ps3-ps4-pc-xboxone-xbox360-switch-6-in-1-pedalli-gaming-oyuncu-direksiyonu"
+                               class="p-name snipcss0-3-42-49">
+                                Rampage V900-S PS3/PS4/PC/XBOXONE/XBOX360 SWITCH 6 in 1 Pedallı Gaming Oyuncu
+                                Direksiyonu
+                            </a>
+                            <div class="qty snipcss0-3-42-50">
+                                <div class="qty-plus snipcss0-4-50-51">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
+                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-51-52">
+                                        <path d="M126.7,8.011,118.864.192a.657.657,0,0,0-.928.931l7.375,7.354-7.375,7.354a.657.657,0,0,0,.928.93L126.7,8.942a.657.657,0,0,0,0-.93Z"
+                                              transform="translate(-117.742 0)" fill="#fff">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="piece snipcss0-4-50-53">
+                                    <input type="number" step="1" name="adet" value="1" data-update-qty="20504" min="1"
+                                           class="snipcss0-5-53-54">
+                                    <span class="snipcss0-5-53-55">
+                                        Adet
+                                    </span>
+                                </div>
+                                <div class="qty-minus snipcss0-4-50-56">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
+                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-56-57">
+                                        <path d="M8.963,8.942l-7.841,7.82a.657.657,0,0,1-.928-.931L7.568,8.477.193,1.122a.657.657,0,0,1,.928-.93L8.963,8.011a.657.657,0,0,1,0,.93Z"
+                                              transform="translate(0)" fill="#fff">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="price snipcss0-3-42-58">
+                                <p class="snipcss0-4-58-59">
+                                    5.199,00 TL
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket-bottom ">
+                        <p class="">
+                            <b class="">
+                                Toplam:
+                            </b>
+                            23.597,00 TL
+                        </p>
+                        <a href="/basket.html" class="odeme-yap">
+                            Ödeme Yap
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28.615" height="16.436"
+                                 viewBox="0 0 28.615 16.436" class="snipcss0-3-63-64">
+                                <g transform="translate(0.75 1.056)" class="snipcss0-4-64-65">
+                                    <path d="M0,0,8.719,7.163,0,14.325" transform="translate(18.396)">
+                                    </path>
+                                    <path d="M0,0H26.993" transform="translate(0 7.163)">
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="shop-item-container">
+            <div class="all-boxes-item">
+                <ul>
+                    <li>
+                        <a href="shop.html">
+                            <img src="~/assets/image/7_2.svg" alt="kulaklik">
+                            <span>Kulaklik ve Mikrafon</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/liklavye.svg" alt="kulaklik">
+                            <span>Klavye</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/limonitor.svg" alt="kulaklik">
+                            <span>Monitör</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/limouse.svg" alt="kulaklik">
+                            <span>Mouse</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/likasa.svg" alt="kulaklik">
+                            <span>Kasa</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/likoltuk.svg" alt="kulaklik">
+                            <span>Oyuncu Koltuğu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/lidireksiyon.svg" alt="kulaklik">
+                            <span>Direksiyon</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/limousepad.svg" alt="kulaklik">
+                            <span>Mouse Pad</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/lisogutucu.svg" alt="kulaklik">
+                            <span>Notebook Soğutucu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/lipowersupply.svg" alt="kulaklik">
+                            <span>Power Supply</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/lioyunkolu.svg" alt="kulaklik">
+                            <span>Oyun Kolu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/lisessistemi.svg" alt="kulaklik">
+                            <span>Ses Sistemi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/lisogutmasistemi.svg" alt="kulaklik">
+                            <span>Soğutma Sistemleri</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/licanta.svg" alt="kulaklik">
+                            <span>Çanta</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/assets/image/liaksesuarlar.svg" alt="kulaklik">
+                            <span>Aksesuarlar</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="shop-item-search-container">
+            <div class="search-close-icon">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <form action="#" id="form">
+                <p>Size Nasıl Yardımcı Olabiliriz?</p>
+                <input type="text" placeholder="Ürün veya Kod Ara" class="form_input">
+            </form>
+        </div>
+    </header>
+    <!-- Header Sections End -->
+    @RenderBody()
+
+</body>
+
+</html>

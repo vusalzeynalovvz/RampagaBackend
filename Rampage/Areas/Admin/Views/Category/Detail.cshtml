@@ -1,0 +1,133 @@
+﻿@model Category
+@{
+    int Count = 1;
+    int PCount = 1;
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+
+        <div class="col-sm-12 col-xl-12">
+            <div class="card">
+                <div style="background-color:red;color:white" class="card-header">
+                    @Model.Name
+                </div>
+                <div style="background-color:black" class="card-body">
+                    <div style="display:flex;justify-content:space-between">
+                        <p>
+
+                            Resim:  <img style="width:100px;height:100px" src="@Model.ImagePath" />
+                        </p>
+                        <p>
+
+                            Arka plan resmi:  <img style="width:100px;height:100px" src="@Model.BGImagePath" />
+                        </p>
+
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+
+                    @{
+                        if (Model.ChildCategories.Count > 0)
+                        {
+
+                            <h3>
+                                Alt Kategorileri:
+                            </h3>
+                            <br />
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Resim</th>
+                                        <th scope="col">Adı</th>
+                                        <th scope="col">Eylemler</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (Category category in Model.ChildCategories)
+                                    {
+                                        <tr>
+                                            <th scope="row">@(Count++)</th>
+                                            <td> <img style="width:50px;height:50px;border-radius:100%" src="@category.ImagePath" />  </td>
+                                            <td>@category.Name</td>
+                                            <td>
+                                                <a asp-action="Detail" asp-route-id="@category.Id" class="btn btn-info">Info</a>
+                                                <a asp-action="Update" asp-route-id="@category.Id" class="btn btn-warning">Değiştir</a>
+                                                @{
+                                                    if (category.ChildCategories.Count == 0)
+                                                    {
+                                                        <a asp-action="Delete" asp-route-id="@category.Id" class="btn btn-danger">Sil</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a class="btn btn-light">Sil</a>
+                                                    }
+                                                }
+
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        }
+                    }
+
+
+
+                    @{
+                        if (Model.Products.Count > 0)
+                        {
+
+                            <h3>
+                                Ürünler:
+                            </h3>
+                            <br />
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Resim</th>
+                                        <th scope="col">Adı</th>
+                                        <th scope="col">Fiyat</th>
+                                        <th scope="col">Eylemler</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (Product product in Model.Products)
+                                    {
+                                        <tr>
+                                            <th scope="row">@(PCount++)</th>
+                                            <td> <img style="width:50px;height:50px;border-radius:100%" src="@product.BaseImagePath" />  </td>
+                                            <td>@product.Name</td>
+                                            <td>@product.Price</td>
+                                            <td>
+                                                <a asp-action="Detail" asp-controller="Product" asp-route-id="@product.Id" class="btn btn-info">Info</a>
+                                                <a asp-action="Update" asp-controller="Product" asp-route-id="@product.Id" class="btn btn-warning">Değiştir</a>
+                                                <a asp-action="Delete" asp-controller="Product" asp-route-id="@product.Id" class="btn btn-danger">Sil</a>
+
+
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        }
+                    }
+
+
+
+                    <a asp-action="Index" class="btn btn-primary">Geri</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

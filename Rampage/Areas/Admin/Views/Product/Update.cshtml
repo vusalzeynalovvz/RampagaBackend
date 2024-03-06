@@ -1,0 +1,135 @@
+﻿@model ProductPutVM
+
+
+<!-- Form Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+
+        <div class="col-sm-12 col-xl-6">
+            <form style="margin:auto" method="post" enctype="multipart/form-data" class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Ürün düzenle</h6>
+                <div class="form-floating mb-3">
+                    <input asp-for="Name" class="form-control" id="floatingInput"
+                           placeholder="Kategori adı girin">
+                    <label for="floatingInput">Ad</label>
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+
+
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Price" class="form-control" id=""
+                           placeholder="Fiyat girin">
+                    <label for="floatingInput">Fiyat</label>
+                    <span class="text-danger" asp-validation-for="Price"></span>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Count" class="form-control" id="floatingInput"
+                           placeholder="Adet girin">
+                    <label for="floatingInput">Adet</label>
+                    <span class="text-danger" asp-validation-for="Count"></span>
+                </div>
+
+
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Barcode" class="form-control" id="floatingInput"
+                           placeholder="Barkod girin">
+                    <label for="floatingInput">Barkod</label>
+                    <span class="text-danger" asp-validation-for="Barcode"></span>
+                </div>
+
+                <br />
+
+                <img src="@Model.BaseImagePath" style="height:100px;width:100px" />
+                <div class="form-floating mb-3">
+                    <input asp-for="BaseImagePath" type="hidden" />
+                    <input accept="image/*" asp-for="BaseImage" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Ana Resim</label>
+                    <span class="text-danger" asp-validation-for="BaseImage"></span>
+                </div>
+
+                <br />
+
+                <img src="@Model.BGImagePath" style="height:100px;width:100px" />
+                <div class="form-floating mb-3">
+                    <input asp-for="BGImagePath" type="hidden" />
+                    <input accept="image/*" asp-for="BGImage" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Arka Plan Resmi</label>
+                    <span class="text-danger" asp-validation-for="BGImage"></span>
+                </div>
+
+                <br />
+                @for (int i = 0; i < Model.ImagePaths?.Count; i++)
+                {
+                    var imagePath = Model.ImagePaths[i];
+
+                    <div style="position: relative; display: inline-block; margin-right: 10px;">
+                        <div style="position: relative;">
+                            <img style="width: 100px; height: 100px;" class="primary-img"
+                                 src="@imagePath"
+                                 alt="Product Images" />
+                            <button type="button" class="buttonRemove btn btn-danger" style="position: absolute; top: 0; right: 0; z-index: 1;">
+                                x
+                            </button>
+                            <input asp-for="ImagePaths" type="hidden" value="@imagePath" />
+                            <input asp-for="ImageIds" type="hidden" value="@Model.ImageIds[i]" />
+                        </div>
+
+                    </div>
+                }
+
+                <div class="form-floating mb-3">
+                    <input asp-for="ImagePaths" type="hidden" />
+                    <input accept="image/*" asp-for="Images" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Diğer resimler</label>
+                    <span class="text-danger" asp-validation-for="Images"></span>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <select class="form-select" asp-for="CategoryId" id="floatingSelect"
+                            aria-label="Floating label select example">
+                        <option value="@null" disabled selected>Kategori seçin</option>
+                        @foreach (Category category in ViewBag.Categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+
+                        }
+
+                    </select>
+                    <label for="floatingSelect">Kategori</label>
+                    <span class="text-danger" asp-validation-for="CategoryId"></span>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <select class="form-select" asp-for="ColorId" id="floatingSelect"
+                            aria-label="Floating label select example">
+                        <option value="@null" disabled selected>Renk seçin</option>
+                        @foreach (Color color in ViewBag.Colors)
+                        {
+                            <option value="@color.Id">@color.Name</option>
+
+                        }
+
+                    </select>
+                    <label for="floatingSelect">Renk</label>
+                    <span class="text-danger" asp-validation-for="ColorId"></span>
+                </div>
+
+
+
+
+                <button class="btn btn-warning">Düzenle</button>
+                <a asp-action="Index" class="btn btn-secondary">Geri</a>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!-- Form End -->
+        </div>
+<!-- Content End -->

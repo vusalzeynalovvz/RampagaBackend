@@ -1,0 +1,62 @@
+﻿@model List<Product>
+@{
+    int Count = 1;
+}
+<!-- Table Start -->
+<div class="container-fluid pt-4 px-4">
+
+    <div class="col-12">
+        <div class="bg-secondary rounded h-100 p-4">
+            <h6 class="mb-4">Ürünler</h6>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Resim</th>
+                            <th scope="col">Adı</th>
+                            <th scope="col">Kategori</th>
+                            <th scope="col">Renk</th>
+                            <th scope="col">Fiyat</th>
+                            <th scope="col">Eylemler</th>
+                            <th scope="col"><a asp-action="Create" class="btn btn-success">Ekle</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Product product in Model)
+                        {
+                            <tr>
+                                <th scope="row">@(Count++)</th>
+                                <td> <img style="width:50px;height:50px;border-radius:100%" src="@product.BaseImagePath" />  </td>
+                                <td>@product.Name</td>
+                                <td>
+                                    <a asp-controller="Category" asp-action="Detail" asp-route-id="@product.Category.Id"> 
+                                        @product.Category.Name
+                                    </a>
+                                </td>
+                                <td>
+                                    <a asp-controller="Color" asp-action="Detail" asp-route-id="@product.Color.Id">
+                                        @product.Color.Name
+                                    </a>
+                                </td>
+                                <td>@product.Price</td>
+                                <td>
+                                    <a asp-action="Detail" asp-route-id="@product.Id" class="btn btn-info">Info</a>
+                                    <a asp-action="Update" asp-route-id="@product.Id" class="btn btn-warning">Değiştir</a>
+                                    <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger">Sil</a>
+
+                                </td>
+                            </tr>
+
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<!-- Table End -->
+<!-- Content End -->

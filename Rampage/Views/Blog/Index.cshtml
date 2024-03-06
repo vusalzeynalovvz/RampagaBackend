@@ -1,0 +1,162 @@
+﻿@model BlogVM
+<main>
+    <section class="title-news-box">
+        <div class="title-news-box-container">
+            <div class="news-title">
+                <span>En Son Neler Yaşandı?</span>
+            </div>
+            <div class="news-boxs">
+                @foreach (var blog in Model.Blogs)
+                {
+                    <div class="news-box">
+                        <div class="news-category">
+                            <span>@blog.BlogCategory.Name</span>
+                        </div>
+                        <div class="news-text">
+                            <h3>@blog.Name</h3>
+                        </div>
+                        <div class="news-date">
+                            <span>Paylaşım Tarihi</span>
+                            <div class="date-line"></div>
+                            <p>@blog.CreatedTime</p>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </section>
+    <section class="blog-container">
+        <div class="blog-share-all">
+            <div class="blog-share">
+                <div class="blog-share-title">
+                    <h3>Önceki Paylaşımlar</h3>
+                </div>
+                <div class="blog-image-text">
+                    <div class="blog-image">
+                        <a href="#">
+                            <img src="~/assets/image/eternal-fire.jpg" alt="BlogShare">
+                        </a>
+                    </div>
+                    <div class="blog-text">
+                        <div class="blog-date">
+                            <span>12 / AĞUSTOS / 2023</span>
+                        </div>
+                        <div class="blog-content">
+                            <a href="#">
+                                <h3>Eternel Fire: Türkiye'nin Gururu, Espor Arenasında Parlayan Bir Yıldız</h3>
+                            </a>
+                        </div>
+                        <div class="blog-cnt">
+                            <p>
+                                Merhaba espor tutkunları! Bugün sizleri Türkiye'nin parlayan yıldızı, espor
+                                dünyasının
+                                önde gelen takımlarından biri olan Eternel Fire ile tanıştırmak istiyoruz. Bu
+                                heyecan verici
+                                takım, sadece oyuna değil aynı zamanda hayallere ve başarılara da tutkulu!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-categories-all">
+                <div class="into-blog-cate">
+                    <div class="blog-cate-title">
+                        <img src="~/assets/image/news-icon.png" alt="Rampage Logo">
+                        <span>Kategoriler</span>
+                    </div>
+
+                    <div class="blog-list">
+                        <ul>
+
+                            <li>
+                                <a href="#">
+                                    <span class="news-cont"></span>
+                                    <span>Tümü</span>
+                                </a>
+                            </li>
+                            @foreach (var category in Model.BlogCategories)
+                            {
+                                <li>
+                                    <a href="#">
+                                        <span class="news-cont">@category.Blogs.Count</span>
+                                        <span>@category.Name</span>
+                                    </a>
+                                </li>
+
+                            }
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<!-- Footer Start -->
+<footer>
+    <div class="footer-all">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="~/assets/image/rampage-logo (1).svg" alt="Rampage logo">
+            </div>
+            <div class="footer-email">
+                <a href="#">info@rampage.com.tr</a>
+            </div>
+            <div class="footer-send-email">
+                <div class="buttons">
+                    <span>Katıl</span>
+                    <span>Ayrıl</span>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="eposta" placeholder="E-posta Adresiniz">
+                </div>
+                <div class="send-email">
+                    <button>Gönder</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-mid">
+            <div class="links">
+                <a href="#">Hakkımızda </a>
+                <a href="#">Destek </a>
+                <a href="#">İletişim </a>
+                <a href="#">Bloglar</a>
+            </div>
+            <div class="social-icons">
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+            <div class="policys">
+                <a href="#">Gizlilik ve Çerez Politikası</a>
+                <a href="#">KVKK ve Aydınlatma Metni</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2024 RAMPAGE</span>
+            <p>TR/GLOBAL</p>
+            <p>Web Tasarim By Vusaal</p>
+        </div>
+    </div>
+</footer>
+<!-- Footer Start -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="~/assets/js/blog.js"></script>
+

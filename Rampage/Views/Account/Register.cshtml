@@ -1,0 +1,48 @@
+﻿@model RegisterVM
+<main>
+    <section class="bg-image-register">
+    </section>
+    <section class="register">
+        <form method="post">
+            <div style="color:red" asp-validation-summary="ModelOnly"></div>
+        <div class="register-all">
+            <div class="register-name">
+                <input type="text" asp-for="FullName" placeholder="Adınız Soyadınız">
+                    <span style="color:red" asp-validation-for="FullName"></span>
+            </div>
+            <div class="register-email">
+                <input type="email" asp-for="Email" placeholder="E-posta Adresiniz">
+                    <span style="color:red" asp-validation-for="Email"></span>
+            </div>
+        </div>
+        <div class="password-all">
+            <div class="register-password">
+                <input type="password" asp-for="Password" placeholder="Şifre">
+                    <span style="color:red" asp-validation-for="Password"></span>
+            </div>
+        </div>
+
+        <div class="password-all">
+            <div class="register-password">
+                <input type="password" asp-for="ConfirmPassword" placeholder="Şifre onaylama">
+                <span style="color:red" asp-validation-for="ConfirmPassword"></span>
+            </div>
+        </div>
+
+        <div class="gizlilik">
+            <p>
+                Kişisel verileriniz, <a href="#">Aydınlatma Metni</a> kapsamında işlenmektedir. 'Gönder'
+                butonuna basarak
+                <a href="#"> Gizlilik ve Çerez Politikası</a> 'nı okuduğunuzu ve kabul ettiğinizi
+                onaylıyorsunuz.
+            </p>
+        </div>
+        <div class="send-message-contact">
+            <button type="submit">
+                <i class="fa-solid fa-user"></i>
+                Üye Ol
+            </button>
+        </div>
+        </form>
+    </section>
+</main>

@@ -1,0 +1,59 @@
+﻿@model List<Color>
+@{
+    int Count = 1;
+}
+<!-- Table Start -->
+<div class="container-fluid pt-4 px-4">
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <i class="fa fa-exclamation-circle me-2"></i>Renkleri silmeniz için ilk önce o renkte olan ürünleri silmelisiniz
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="col-12">
+        <div class="bg-secondary rounded h-100 p-4">
+            <h6 class="mb-4">Renkler</h6>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Adı</th>
+                            <th scope="col">Eylemler</th>
+                            <th scope="col"><a asp-action="Create" class="btn btn-success">Ekle</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Color category in Model)
+                        {
+                            <tr>
+                                <th scope="row">@(Count++)</th>
+                                <td>@category.Name</td>
+                                <td>
+                                    <a asp-action="Detail" asp-route-id="@category.Id" class="btn btn-info">Info</a>
+                                    <a asp-action="Update" asp-route-id="@category.Id" class="btn btn-warning">Değiştir</a>
+                                    @{
+                                        if (category.Products.Count == 0)
+                                        {
+                                            <a asp-action="Delete" asp-route-id="@category.Id" class="btn btn-danger">Sil</a>
+                                        }
+                                        else
+                                        {
+                                            <a class="btn btn-light">Sil</a>
+                                        }
+                                    }
+
+                                </td>
+                            </tr>
+
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<!-- Table End -->
+<!-- Content End -->
