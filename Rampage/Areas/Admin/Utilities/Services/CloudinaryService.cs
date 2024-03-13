@@ -22,6 +22,10 @@ public class CloudinaryService
         var uploadResult = new ImageUploadResult();
         if (file.Length > 0)
         {
+            if(file.Length>1024*10)
+            {
+
+            }
             using var stream = file.OpenReadStream();
             var uploadParams = new ImageUploadParams
             {
@@ -29,7 +33,8 @@ public class CloudinaryService
             };
             uploadResult = await _cloudinary.UploadAsync(uploadParams);
         }
-        string url = uploadResult.SecureUri.ToString();
+
+        string url = uploadResult.SecureUri.ToString() ?? "";
         return url;
     }
    

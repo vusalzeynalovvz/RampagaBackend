@@ -27,7 +27,7 @@ public class ProductController : Controller
 
     public async Task<IActionResult> Create()
     {
-        var categories = await _context.Categories.ToListAsync();
+        var categories = await _context.Categories.Where(x=>x.ParentCategoryId!=null).ToListAsync();
         var colors = await _context.Colors.ToListAsync();
 
         ViewBag.Categories = categories;
@@ -41,7 +41,7 @@ public class ProductController : Controller
     [HttpPost]
     public async Task<IActionResult> Create(ProductPostVM vm)
     {
-        var categories = await _context.Categories.ToListAsync();
+        var categories = await _context.Categories.Where(x => x.ParentCategoryId != null).ToListAsync();
         var colors = await _context.Colors.ToListAsync();
 
         ViewBag.Categories = categories;
@@ -148,7 +148,7 @@ public class ProductController : Controller
         if (product is null)
             return NotFound();
 
-        var categories = await _context.Categories.ToListAsync();
+        var categories = await _context.Categories.Where(x => x.ParentCategoryId != null).ToListAsync();
         var colors = await _context.Colors.ToListAsync();
 
         ViewBag.Categories = categories;
@@ -194,7 +194,7 @@ public class ProductController : Controller
         if (existProduct is null)
             return NotFound();
 
-        var categories = await _context.Categories.ToListAsync();
+        var categories = await _context.Categories.Where(x => x.ParentCategoryId != null).ToListAsync();
         var colors = await _context.Colors.ToListAsync();
 
         ViewBag.Categories = categories;
@@ -231,9 +231,9 @@ public class ProductController : Controller
 
 
 
-        if (vm.BGImage is not null && !vm.BGImage.ValidateImage(2))
+        if (vm.BGImage is not null && !vm.BGImage.ValidateImage(10))
         {
-            ModelState.AddModelError("BGImage", "Resim doğru formatda ve boyutu 2 mb dan az olmalıdır");
+            ModelState.AddModelError("BGImage", "Resim doğru formatda ve boyutu 10 mb dan az olmalıdır");
             return View(vm);
         }
 

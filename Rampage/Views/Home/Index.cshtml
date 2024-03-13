@@ -280,17 +280,17 @@
         <div class="card-toggle-category">
             <span>ÜRÜN VİTRİNİ</span>
             <div class="card-category">
-                @for (int i = 0; i < Model.Categories.Count; i++)
+                @for (int i = 0; i < Model.SpecialCategories.Count; i++)
                 {
-                    <span class="category-menu@(i+1)">@Model.Categories[i].Name</span>
+                    <span class="category-menu@(i+1)">@Model.SpecialCategories[i].Name</span>
 
                 }
             </div>
         </div>
-        @for (int i = 0; i < Model.Categories.Count; i++)
+        @for (int i = 0; i < Model.SpecialCategories.Count; i++)
         {
             <div class="category-cards@(i+1)">
-                @foreach (var product in Model.Categories[i].Products)
+                @foreach (var product in Model.SpecialCategories[i].Products)
                 {
                     <div class="category-card">
                         <h2>@product.Name</h2>

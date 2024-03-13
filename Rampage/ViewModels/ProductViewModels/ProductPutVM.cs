@@ -13,7 +13,7 @@ public class ProductPutVM
     public string? BGImagePath { get; set; }
     public IFormFile? BGImage { get; set; } = null!;
     public List<string> ImagePaths { get; set; }=new();
-    public List<int>? ImageIds { get; set; }
+    public List<int> ImageIds { get; set; } = new();
     public List<IFormFile> Images { get; set; } = new();
 
     [Range(0, int.MaxValue, ErrorMessage = "Miktar bir negatif değer olamaz.")]

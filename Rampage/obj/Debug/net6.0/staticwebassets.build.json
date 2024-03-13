@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4otD09dLTVhgydzcs2X8kna4NJhQwYAtCI5U2XTVc7Y=",
+  "Hash": "CDWTboXGtF8orIxYq0Fuf4kLnbgT1TtsqwFfQIpf2v8=",
   "Source": "Rampage",
   "BasePath": "_content/Rampage",
   "Mode": "Default",
@@ -492,25 +492,6 @@
       "OriginalItemSpec": "wwwroot\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment.min.js",
-      "SourceId": "Rampage",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\",
-      "BasePath": "_content/Rampage",
-      "RelativePath": "admin/lib/tempusdominus/js/moment.min.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\lib\\tempusdominus\\js\\moment.min.js"
-    },
-    {
       "Identity": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment-timezone.min.js",
       "SourceId": "Rampage",
       "SourceType": "Discovered",
@@ -528,6 +509,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\lib\\tempusdominus\\js\\moment-timezone.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment.min.js",
+      "SourceId": "Rampage",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\",
+      "BasePath": "_content/Rampage",
+      "RelativePath": "admin/lib/tempusdominus/js/moment.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\lib\\tempusdominus\\js\\moment.min.js"
     },
     {
       "Identity": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
@@ -1290,25 +1290,6 @@
       "OriginalItemSpec": "wwwroot\\admin\\scss\\bootstrap\\scss\\_variables.scss"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap.scss",
-      "SourceId": "Rampage",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\",
-      "BasePath": "_content/Rampage",
-      "RelativePath": "admin/scss/bootstrap/scss/bootstrap.scss",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap.scss"
-    },
-    {
       "Identity": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
       "SourceId": "Rampage",
       "SourceType": "Discovered",
@@ -1364,6 +1345,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "SourceId": "Rampage",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\",
+      "BasePath": "_content/Rampage",
+      "RelativePath": "admin/scss/bootstrap/scss/bootstrap.scss",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap.scss"
     },
     {
       "Identity": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss",
@@ -2960,6 +2960,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\image\\aboutunder2.png"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\ad1.png",
+      "SourceId": "Rampage",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\",
+      "BasePath": "_content/Rampage",
+      "RelativePath": "assets/image/ad1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\image\\ad1.png"
     },
     {
       "Identity": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\categoriesKasa.png",

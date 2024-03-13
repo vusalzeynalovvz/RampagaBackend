@@ -4,6 +4,7 @@ using Rampage.Areas.Admin.Utilities.Helpers;
 using Rampage.Areas.Admin.Utilities.Services;
 using Rampage.Database;
 using Rampage.Database.DomainModels;
+using Rampage.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<CloudinaryService>();
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 builder.Services.AddScoped<MailKitHelper>();
+builder.Services.AddScoped<LayoutService>();
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 {

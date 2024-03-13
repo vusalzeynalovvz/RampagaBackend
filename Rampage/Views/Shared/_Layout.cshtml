@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Rampage.Services
+@using System.Security.Claims
+@inject LayoutService _service;
+
+@{
+    var categories = await _service.GetCategories();
+}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -36,12 +43,26 @@
                 <img src="~/assets/image/rampage-logo (1).svg" alt="Rampage Logo">
             </div>
             <ul>
-                <li style="cursor: pointer;">
-                    <a href="login.html">
-                        <i class="fa-solid fa-user"></i>
-                        <span>Giris yap</span>
-                    </a>
-                </li>
+                @{
+                    if (User.Identity?.IsAuthenticated ?? false)
+                    {
+                        <li style="cursor: pointer;">
+                            <a asp-action="UserInfo" asp-controller="Account">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li style="cursor: pointer;">
+                            <a asp-action="Login" asp-controller="Account">
+                                <i class="fa-solid fa-user"></i>
+                                <span>Giris yap</span>
+                            </a>
+                        </li>
+
+                    }
+                }
                 <li>
                     <i class="fa-solid fa-truck"></i>
                 </li>
@@ -267,100 +288,45 @@
         <div class="shop-item-container">
             <div class="all-boxes-item">
                 <ul>
-                    <li>
-                        <a href="shop.html">
-                            <img src="~/assets/image/7_2.svg" alt="kulaklik">
-                            <span>Kulaklik ve Mikrafon</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/liklavye.svg" alt="kulaklik">
-                            <span>Klavye</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/limonitor.svg" alt="kulaklik">
-                            <span>Monitör</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/limouse.svg" alt="kulaklik">
-                            <span>Mouse</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/likasa.svg" alt="kulaklik">
-                            <span>Kasa</span>
-                        </a>
-                    </li>
+                    @for (int i = 0; i <= 3; i++)
+                    {
+                        var category = categories[i];
+                        <li>
+                            <a asp-controller="Shop" asp-route-categoryId="@category.Id" asp-action="Index">
+                                <img src="@category.ImagePath" alt="@category.Name">
+                                <span>@category.Name</span>
+                            </a>
+                        </li>
+
+                    }
+
+
                 </ul>
                 <ul>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/likoltuk.svg" alt="kulaklik">
-                            <span>Oyuncu Koltuğu</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/lidireksiyon.svg" alt="kulaklik">
-                            <span>Direksiyon</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/limousepad.svg" alt="kulaklik">
-                            <span>Mouse Pad</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/lisogutucu.svg" alt="kulaklik">
-                            <span>Notebook Soğutucu</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/lipowersupply.svg" alt="kulaklik">
-                            <span>Power Supply</span>
-                        </a>
-                    </li>
+                    @for (int i = 4; i <= 7; i++)
+                    {
+                        var category = categories[i];
+                        <li>
+                            <a asp-controller="Shop" asp-route-categoryId="@category.Id" asp-action="Index">
+                                <img src="@category.ImagePath" alt="@category.Name">
+                                <span>@category.Name</span>
+                            </a>
+                        </li>
+
+                    }
                 </ul>
                 <ul>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/lioyunkolu.svg" alt="kulaklik">
-                            <span>Oyun Kolu</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/lisessistemi.svg" alt="kulaklik">
-                            <span>Ses Sistemi</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/lisogutmasistemi.svg" alt="kulaklik">
-                            <span>Soğutma Sistemleri</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/licanta.svg" alt="kulaklik">
-                            <span>Çanta</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="~/assets/image/liaksesuarlar.svg" alt="kulaklik">
-                            <span>Aksesuarlar</span>
-                        </a>
-                    </li>
+                    @for (int i = 8; i <= 11; i++)
+                    {
+                        var category = categories[i];
+                        <li>
+                            <a asp-controller="Shop" asp-route-categoryId="@category.Id" asp-action="Index">
+                                <img src="@category.ImagePath" alt="@category.Name">
+                                <span>@category.Name</span>
+                            </a>
+                        </li>
+
+                    }
                 </ul>
             </div>
         </div>

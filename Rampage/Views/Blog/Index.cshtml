@@ -6,9 +6,9 @@
                 <span>En Son Neler Yaşandı?</span>
             </div>
             <div class="news-boxs">
-                @foreach (var blog in Model.Blogs)
+                @foreach (var blog in Model.RecentBlogs)
                 {
-                    <div class="news-box">
+                    <div class="news-box" style="margin-right:10px">
                         <div class="news-category">
                             <span>@blog.BlogCategory.Name</span>
                         </div>
@@ -18,7 +18,7 @@
                         <div class="news-date">
                             <span>Paylaşım Tarihi</span>
                             <div class="date-line"></div>
-                            <p>@blog.CreatedTime</p>
+                            <p>@blog.CreatedTime.ToString().Substring(0,10)</p>
                         </div>
                     </div>
                 }
@@ -32,32 +32,31 @@
                 <div class="blog-share-title">
                     <h3>Önceki Paylaşımlar</h3>
                 </div>
-                <div class="blog-image-text">
-                    <div class="blog-image">
-                        <a href="#">
-                            <img src="~/assets/image/eternal-fire.jpg" alt="BlogShare">
-                        </a>
-                    </div>
-                    <div class="blog-text">
-                        <div class="blog-date">
-                            <span>12 / AĞUSTOS / 2023</span>
-                        </div>
-                        <div class="blog-content">
+                @foreach (var blog in Model.Blogs)
+                {
+                    <div class="blog-image-text" style="margin-bottom:20px">
+                        <div class="blog-image">
                             <a href="#">
-                                <h3>Eternel Fire: Türkiye'nin Gururu, Espor Arenasında Parlayan Bir Yıldız</h3>
+                                <img src="@blog.ImagePath" alt="BlogShare">
                             </a>
                         </div>
-                        <div class="blog-cnt">
-                            <p>
-                                Merhaba espor tutkunları! Bugün sizleri Türkiye'nin parlayan yıldızı, espor
-                                dünyasının
-                                önde gelen takımlarından biri olan Eternel Fire ile tanıştırmak istiyoruz. Bu
-                                heyecan verici
-                                takım, sadece oyuna değil aynı zamanda hayallere ve başarılara da tutkulu!
-                            </p>
+                        <div class="blog-text">
+                            <div class="blog-date">
+                                <span>@blog.CreatedTime.ToString().Substring(0,10)</span>
+                            </div>
+                            <div class="blog-content">
+                                <a href="#">
+                                    <h3>@blog.Name</h3>
+                                </a>
+                            </div>
+                            <div class="blog-cnt">
+                                <p>
+                                  @blog.Description
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
             </div>
             <div class="blog-categories-all">
                 <div class="into-blog-cate">
@@ -70,7 +69,7 @@
                         <ul>
 
                             <li>
-                                <a href="#">
+                                <a asp-action="Index" asp-controller="Blog" asp-route-id="@null">
                                     <span class="news-cont"></span>
                                     <span>Tümü</span>
                                 </a>
@@ -78,7 +77,7 @@
                             @foreach (var category in Model.BlogCategories)
                             {
                                 <li>
-                                    <a href="#">
+                                    <a asp-action="Index" asp-controller="Blog" asp-route-id="@category.Id">
                                         <span class="news-cont">@category.Blogs.Count</span>
                                         <span>@category.Name</span>
                                     </a>

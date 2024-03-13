@@ -23,7 +23,8 @@ public class HomeController : Controller
             PopularProducts = await _context.Products.OrderBy(x => x.Price).Take(2).ToListAsync(),
             SpecialProducts = await _context.Products.OrderByDescending(x => x.Price).Take(2).ToListAsync(),
 
-            Categories = await _context.Categories.Take(4).ToListAsync()
+            Categories = await _context.Categories.Take(4).ToListAsync(),
+            SpecialCategories=await _context.Categories.Include(x=>x.Products).OrderByDescending(x => x.Products.Count).Take(4).ToListAsync()
         };
 
         return View(vm);
