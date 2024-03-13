@@ -740,12 +740,16 @@
                                     <div class="product-price">
                                         <span>@product.Price TL</span>
                                     </div>
-                                    <div class="product-add-basket">
-                                        <div>
-                                            <a href="#">Sepete Ekle</a>
+                                    <div class="product-add-basket" style="display: flex; text-align: center; padding-right: 20px;">
+                                        <div style="margin: 0 auto;">
+                                            <a asp-action="AddToBasket" asp-route-id="@product.Id">Sepete Ekle</a>
                                             <span>+</span>
                                         </div>
                                     </div>
+
+
+
+
                                 </a>
                             </div>
                         }
