@@ -224,6 +224,33 @@ namespace Rampage.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("Rampage.Database.DomainModels.BasketItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("BasketItems");
+                });
+
             modelBuilder.Entity("Rampage.Database.DomainModels.Blog", b =>
                 {
                     b.Property<int>("Id")
@@ -493,6 +520,25 @@ namespace Rampage.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Rampage.Database.DomainModels.BasketItem", b =>
+                {
+                    b.HasOne("Rampage.Database.DomainModels.AppUser", "AppUser")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Rampage.Database.DomainModels.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Rampage.Database.DomainModels.Blog", b =>
                 {
                     b.HasOne("Rampage.Database.DomainModels.BlogCategory", "BlogCategory")
@@ -552,6 +598,11 @@ namespace Rampage.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Rampage.Database.DomainModels.AppUser", b =>
+                {
+                    b.Navigation("BasketItems");
                 });
 
             modelBuilder.Entity("Rampage.Database.DomainModels.BlogCategory", b =>

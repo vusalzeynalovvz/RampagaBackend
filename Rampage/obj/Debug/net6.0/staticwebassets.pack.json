@@ -1,955 +1,955 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Rampage.bundle.scp.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Rampage.bundle.scp.css",
       "PackagePath": "staticwebassets\\Rampage.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\admin\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\css\\style.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\css\\style.css",
       "PackagePath": "staticwebassets\\admin\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\img\\about-big-img.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\img\\about-big-img.svg",
       "PackagePath": "staticwebassets\\admin\\img\\about-big-img.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\img\\testimonial-1.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\img\\testimonial-1.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\testimonial-1.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\img\\testimonial-2.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\img\\testimonial-2.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\testimonial-2.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\img\\user.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\img\\user.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\user.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\js\\main.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\js\\main.js",
       "PackagePath": "staticwebassets\\admin\\js\\main.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\chart\\chart.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\chart\\chart.min.js",
       "PackagePath": "staticwebassets\\admin\\lib\\chart\\chart.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\easing\\easing.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\easing\\easing.js",
       "PackagePath": "staticwebassets\\admin\\lib\\easing\\easing.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\easing\\easing.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\easing\\easing.min.js",
       "PackagePath": "staticwebassets\\admin\\lib\\easing\\easing.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\LICENSE",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\LICENSE",
       "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\ajax-loader.gif",
       "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\ajax-loader.gif"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.carousel.css",
       "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.carousel.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
       "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.css",
       "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
       "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.css",
       "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
       "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.video.play.png",
       "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.video.play.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\owl.carousel.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\owl.carousel.js",
       "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\owl.carousel.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\owl.carousel.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\owlcarousel\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\owl.carousel.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css",
       "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css",
       "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment-timezone.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment-timezone.min.js",
       "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\moment-timezone.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment.min.js",
       "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\moment.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
       "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js",
       "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\waypoints\\links.php",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\waypoints\\links.php",
       "PackagePath": "staticwebassets\\admin\\lib\\waypoints\\links.php"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\lib\\waypoints\\waypoints.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\lib\\waypoints\\waypoints.min.js",
       "PackagePath": "staticwebassets\\admin\\lib\\waypoints\\waypoints.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_accordion.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_accordion.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_accordion.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_alert.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_alert.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_alert.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_badge.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_badge.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_badge.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_breadcrumb.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_breadcrumb.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_button-group.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_button-group.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_button-group.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_buttons.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_buttons.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_buttons.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_card.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_card.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_card.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_carousel.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_carousel.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_carousel.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_close.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_close.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_close.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_containers.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_containers.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_containers.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_dropdown.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_dropdown.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_forms.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_forms.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_forms.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_functions.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_functions.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_functions.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_grid.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_grid.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_grid.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_helpers.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_helpers.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_helpers.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_images.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_images.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_images.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_list-group.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_list-group.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_list-group.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_mixins.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_mixins.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_mixins.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_modal.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_modal.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_modal.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_nav.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_nav.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_nav.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_navbar.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_navbar.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_navbar.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_offcanvas.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_offcanvas.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_offcanvas.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_pagination.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_pagination.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_pagination.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_popover.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_popover.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_popover.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_progress.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_progress.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_progress.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_reboot.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_reboot.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_reboot.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_root.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_root.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_root.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_spinners.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_spinners.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_spinners.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_tables.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_tables.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_tables.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_toasts.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_toasts.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_toasts.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_tooltip.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_tooltip.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_transitions.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_transitions.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_transitions.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_type.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_type.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_type.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_utilities.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_utilities.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_utilities.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_variables.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\_variables.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_variables.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-check.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-check.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-check.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-control.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-control.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-control.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-range.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-range.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-range.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-select.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-select.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-select.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-text.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-text.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-text.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_input-group.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_input-group.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_input-group.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_labels.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_labels.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_labels.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_validation.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_validation.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_validation.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_position.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_position.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_position.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_ratio.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_ratio.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_container.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_container.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_container.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_image.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_image.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_resize.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_utilities.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_utilities.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\utilities\\_api.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\utilities\\_api.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\utilities\\_api.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\admin\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
       "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\about.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\about.css",
       "PackagePath": "staticwebassets\\assets\\css\\about.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\about.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\about.css.map",
       "PackagePath": "staticwebassets\\assets\\css\\about.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\about.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\about.scss",
       "PackagePath": "staticwebassets\\assets\\css\\about.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\basketsepet.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\basketsepet.css",
       "PackagePath": "staticwebassets\\assets\\css\\basketsepet.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\basketsepet.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\basketsepet.css.map",
       "PackagePath": "staticwebassets\\assets\\css\\basketsepet.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\basketsepet.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\basketsepet.scss",
       "PackagePath": "staticwebassets\\assets\\css\\basketsepet.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\basketteslimat.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\basketteslimat.css",
       "PackagePath": "staticwebassets\\assets\\css\\basketteslimat.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\basketteslimat.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\basketteslimat.css.map",
       "PackagePath": "staticwebassets\\assets\\css\\basketteslimat.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\basketteslimat.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\basketteslimat.scss",
       "PackagePath": "staticwebassets\\assets\\css\\basketteslimat.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\blog.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\blog.css",
       "PackagePath": "staticwebassets\\assets\\css\\blog.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\blog.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\blog.css.map",
       "PackagePath": "staticwebassets\\assets\\css\\blog.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\blog.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\blog.scss",
       "PackagePath": "staticwebassets\\assets\\css\\blog.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\contact.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\contact.css",
       "PackagePath": "staticwebassets\\assets\\css\\contact.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\contact.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\contact.css.map",
       "PackagePath": "staticwebassets\\assets\\css\\contact.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\contact.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\contact.scss",
       "PackagePath": "staticwebassets\\assets\\css\\contact.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\login.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\login.css",
       "PackagePath": "staticwebassets\\assets\\css\\login.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\login.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\login.css.map",
       "PackagePath": "staticwebassets\\assets\\css\\login.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\login.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\login.scss",
       "PackagePath": "staticwebassets\\assets\\css\\login.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\register.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\register.css",
       "PackagePath": "staticwebassets\\assets\\css\\register.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\register.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\register.css.map",
       "PackagePath": "staticwebassets\\assets\\css\\register.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\register.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\register.scss",
       "PackagePath": "staticwebassets\\assets\\css\\register.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\shop.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\shop.css",
       "PackagePath": "staticwebassets\\assets\\css\\shop.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\shop.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\shop.css.map",
       "PackagePath": "staticwebassets\\assets\\css\\shop.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\shop.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\shop.scss",
       "PackagePath": "staticwebassets\\assets\\css\\shop.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\shopdetail.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\shopdetail.css",
       "PackagePath": "staticwebassets\\assets\\css\\shopdetail.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\shopdetail.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\shopdetail.css.map",
       "PackagePath": "staticwebassets\\assets\\css\\shopdetail.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\shopdetail.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\shopdetail.scss",
       "PackagePath": "staticwebassets\\assets\\css\\shopdetail.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\style.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\style.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\style.css.map",
       "PackagePath": "staticwebassets\\assets\\css\\style.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\style.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\style.scss",
       "PackagePath": "staticwebassets\\assets\\css\\style.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\userpage.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\userpage.css",
       "PackagePath": "staticwebassets\\assets\\css\\userpage.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\userpage.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\userpage.css.map",
       "PackagePath": "staticwebassets\\assets\\css\\userpage.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\css\\userpage.scss",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\userpage.scss",
       "PackagePath": "staticwebassets\\assets\\css\\userpage.scss"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\7_2.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\7_2.svg",
       "PackagePath": "staticwebassets\\assets\\image\\7_2.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\8570.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\8570.png",
       "PackagePath": "staticwebassets\\assets\\image\\8570.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\about-big-img.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\about-big-img.svg",
       "PackagePath": "staticwebassets\\assets\\image\\about-big-img.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\aboutslider1.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\aboutslider1.png",
       "PackagePath": "staticwebassets\\assets\\image\\aboutslider1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\aboutslider2.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\aboutslider2.png",
       "PackagePath": "staticwebassets\\assets\\image\\aboutslider2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\aboutslider3.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\aboutslider3.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\aboutslider3.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\aboutslider4.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\aboutslider4.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\aboutslider4.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\aboutunder1.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\aboutunder1.png",
       "PackagePath": "staticwebassets\\assets\\image\\aboutunder1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\aboutunder2.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\aboutunder2.png",
       "PackagePath": "staticwebassets\\assets\\image\\aboutunder2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\ad1.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\ad1.png",
       "PackagePath": "staticwebassets\\assets\\image\\ad1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\categoriesKasa.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\categoriesKasa.png",
       "PackagePath": "staticwebassets\\assets\\image\\categoriesKasa.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\categoriesMonitor.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\categoriesMonitor.png",
       "PackagePath": "staticwebassets\\assets\\image\\categoriesMonitor.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\categoriesMouse.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\categoriesMouse.png",
       "PackagePath": "staticwebassets\\assets\\image\\categoriesMouse.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\categoriesklavye.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\categoriesklavye.png",
       "PackagePath": "staticwebassets\\assets\\image\\categoriesklavye.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\categoryimage.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\categoryimage.png",
       "PackagePath": "staticwebassets\\assets\\image\\categoryimage.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\demobg.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\demobg.png",
       "PackagePath": "staticwebassets\\assets\\image\\demobg.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\demosepet.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\demosepet.png",
       "PackagePath": "staticwebassets\\assets\\image\\demosepet.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\diger_resim4.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\diger_resim4.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\diger_resim4.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\diger_resim5.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\diger_resim5.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\diger_resim5.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\direksiyon2.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\direksiyon2.png",
       "PackagePath": "staticwebassets\\assets\\image\\direksiyon2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\download (1).png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\download (1).png",
       "PackagePath": "staticwebassets\\assets\\image\\download (1).png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\download.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\download.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\download.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\download.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\download.png",
       "PackagePath": "staticwebassets\\assets\\image\\download.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\eternal-fire.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\eternal-fire.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\eternal-fire.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\filterImage.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\filterImage.png",
       "PackagePath": "staticwebassets\\assets\\image\\filterImage.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\for-youMouse.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\for-youMouse.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\for-youMouse.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\headphones.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\headphones.png",
       "PackagePath": "staticwebassets\\assets\\image\\headphones.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\klavye.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\klavye.png",
       "PackagePath": "staticwebassets\\assets\\image\\klavye.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\kulaklik.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\kulaklik.png",
       "PackagePath": "staticwebassets\\assets\\image\\kulaklik.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\kulaklikcategories.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\kulaklikcategories.png",
       "PackagePath": "staticwebassets\\assets\\image\\kulaklikcategories.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\liaksesuarlar.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\liaksesuarlar.svg",
       "PackagePath": "staticwebassets\\assets\\image\\liaksesuarlar.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\licanta.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\licanta.svg",
       "PackagePath": "staticwebassets\\assets\\image\\licanta.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\lidireksiyon.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\lidireksiyon.svg",
       "PackagePath": "staticwebassets\\assets\\image\\lidireksiyon.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\likasa.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\likasa.svg",
       "PackagePath": "staticwebassets\\assets\\image\\likasa.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\liklavye.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\liklavye.svg",
       "PackagePath": "staticwebassets\\assets\\image\\liklavye.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\likoltuk.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\likoltuk.svg",
       "PackagePath": "staticwebassets\\assets\\image\\likoltuk.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\limonitor.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\limonitor.svg",
       "PackagePath": "staticwebassets\\assets\\image\\limonitor.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\limouse.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\limouse.svg",
       "PackagePath": "staticwebassets\\assets\\image\\limouse.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\limousepad.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\limousepad.svg",
       "PackagePath": "staticwebassets\\assets\\image\\limousepad.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\lioyunkolu.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\lioyunkolu.svg",
       "PackagePath": "staticwebassets\\assets\\image\\lioyunkolu.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\lipowersupply.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\lipowersupply.svg",
       "PackagePath": "staticwebassets\\assets\\image\\lipowersupply.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\lisessistemi.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\lisessistemi.svg",
       "PackagePath": "staticwebassets\\assets\\image\\lisessistemi.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\lisogutmasistemi.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\lisogutmasistemi.svg",
       "PackagePath": "staticwebassets\\assets\\image\\lisogutmasistemi.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\lisogutucu.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\lisogutucu.svg",
       "PackagePath": "staticwebassets\\assets\\image\\lisogutucu.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\news-icon.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\news-icon.png",
       "PackagePath": "staticwebassets\\assets\\image\\news-icon.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\productimageheight.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\productimageheight.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\productimageheight.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\productkulaklik.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\productkulaklik.png",
       "PackagePath": "staticwebassets\\assets\\image\\productkulaklik.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\rampage-logo (1).svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\rampage-logo (1).svg",
       "PackagePath": "staticwebassets\\assets\\image\\rampage-logo (1).svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\rampage-white.svg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\rampage-white.svg",
       "PackagePath": "staticwebassets\\assets\\image\\rampage-white.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\securimage_show.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\securimage_show.png",
       "PackagePath": "staticwebassets\\assets\\image\\securimage_show.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop1.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop1.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop10.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop10.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop10.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop11.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop11.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop11.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop12.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop12.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop12.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop13.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop13.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop13.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop14.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop14.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop14.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop15.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop15.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop15.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop16.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop16.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop16.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop17.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop17.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop17.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop18.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop18.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop18.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop2.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop2.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop3.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop3.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop4.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop4.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop5.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop5.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop5.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop6.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop6.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop6.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop7.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop7.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop7.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop8.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop8.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop8.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shop9.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shop9.png",
       "PackagePath": "staticwebassets\\assets\\image\\shop9.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shopbackground.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shopbackground.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\shopbackground.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shopdetail1.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shopdetail1.png",
       "PackagePath": "staticwebassets\\assets\\image\\shopdetail1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shopdetail2.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shopdetail2.png",
       "PackagePath": "staticwebassets\\assets\\image\\shopdetail2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shopdetail3.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shopdetail3.png",
       "PackagePath": "staticwebassets\\assets\\image\\shopdetail3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shopdetail4.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shopdetail4.png",
       "PackagePath": "staticwebassets\\assets\\image\\shopdetail4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shopdetail5.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shopdetail5.png",
       "PackagePath": "staticwebassets\\assets\\image\\shopdetail5.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shopdetail6.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shopdetail6.png",
       "PackagePath": "staticwebassets\\assets\\image\\shopdetail6.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\shopdetail7.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\shopdetail7.png",
       "PackagePath": "staticwebassets\\assets\\image\\shopdetail7.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\sliderphoto.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\sliderphoto.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\sliderphoto.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\stat-bg.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\stat-bg.png",
       "PackagePath": "staticwebassets\\assets\\image\\stat-bg.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\tabkulaklikkucuk.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\tabkulaklikkucuk.png",
       "PackagePath": "staticwebassets\\assets\\image\\tabkulaklikkucuk.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\usercommentimage1.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\usercommentimage1.png",
       "PackagePath": "staticwebassets\\assets\\image\\usercommentimage1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\userdireksiyon.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\userdireksiyon.png",
       "PackagePath": "staticwebassets\\assets\\image\\userdireksiyon.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\image\\usermouse.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\image\\usermouse.png",
       "PackagePath": "staticwebassets\\assets\\image\\usermouse.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\js\\about.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\js\\about.js",
       "PackagePath": "staticwebassets\\assets\\js\\about.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\js\\basketsepet.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\js\\basketsepet.js",
       "PackagePath": "staticwebassets\\assets\\js\\basketsepet.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\js\\basketteslimat.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\js\\basketteslimat.js",
       "PackagePath": "staticwebassets\\assets\\js\\basketteslimat.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\js\\blog.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\js\\blog.js",
       "PackagePath": "staticwebassets\\assets\\js\\blog.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\js\\contact.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\js\\contact.js",
       "PackagePath": "staticwebassets\\assets\\js\\contact.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\js\\login.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\js\\login.js",
       "PackagePath": "staticwebassets\\assets\\js\\login.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\js\\main.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\js\\main.js",
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\js\\register.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\js\\register.js",
       "PackagePath": "staticwebassets\\assets\\js\\register.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\js\\shop.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\js\\shop.js",
       "PackagePath": "staticwebassets\\assets\\js\\shop.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\js\\shopdetail.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\js\\shopdetail.js",
       "PackagePath": "staticwebassets\\assets\\js\\shopdetail.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\Rampage\\Rampage\\wwwroot\\assets\\js\\userpage.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\js\\userpage.js",
       "PackagePath": "staticwebassets\\assets\\js\\userpage.js"
     },
     {

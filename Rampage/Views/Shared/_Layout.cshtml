@@ -4,6 +4,8 @@
 
 @{
     var categories = await _service.GetCategories();
+    var basketItems = await _service.GetBasket();
+    decimal totalPrice = 0;
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -90,184 +92,73 @@
                         </svg>
                     </p>
                     <div class="b-product-list ">
-                        <div class="product-item snipcss0-2-5-6">
-                            <div class="delete snipcss0-3-6-7" onclick="delete_from_cart(20500);">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="11.583" height="11.583"
-                                     viewBox="0 0 11.583 11.583" class="snipcss0-4-7-8">
-                                    <g transform="translate(-7.783 -7.783)" class="snipcss0-5-8-9">
-                                        <path d="M9.2,17.952,17.952,9.2" transform="translate(0 0)">
-                                        </path>
-                                        <path d="M9.2,9.2l8.755,8.755" transform="translate(0 0)">
-                                        </path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <a href="tr/urun/rampage-v902-ps3-ps4-pc-xboxone-xbox360-switch-3-pedalli-el-vitesli-gaming-oyuncu-direksiyonu"
-                               class="snipcss0-3-6-10">
-                                <img src="https://www.rampage.com.tr/rampage2/dosyalar/urun/698/4146_k.png?m=1684664665"
-                                     alt="Rampage V902 PS3/PS4/PC/XBOXONE/XBOX360 /SWITCH 3 Pedallı -El Vitesli Gaming Oyuncu Direksiyonu"
-                                     class="snipcss0-4-10-11">
-                            </a>
-                            <div class="num snipcss0-3-6-12">
-                                36891
-                            </div>
-                            <a href="tr/urun/rampage-v902-ps3-ps4-pc-xboxone-xbox360-switch-3-pedalli-el-vitesli-gaming-oyuncu-direksiyonu"
-                               class="p-name snipcss0-3-6-13">
-                                Rampage V902 PS3/PS4/PC/XBOXONE/XBOX360 /SWITCH 3 Pedallı -El Vitesli Gaming Oyuncu
-                                Direksiyonu
-                            </a>
-                            <div class="qty snipcss0-3-6-14">
-                                <div class="qty-plus snipcss0-4-14-15">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
-                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-15-16">
-                                        <path d="M126.7,8.011,118.864.192a.657.657,0,0,0-.928.931l7.375,7.354-7.375,7.354a.657.657,0,0,0,.928.93L126.7,8.942a.657.657,0,0,0,0-.93Z"
-                                              transform="translate(-117.742 0)" fill="#fff">
-                                        </path>
+                        @foreach (var bItem in basketItems)
+                        {
+                            totalPrice += (bItem.Product.Price * bItem.Count);
+                            <div class="product-item snipcss0-2-5-6">
+                                <div class="delete snipcss0-3-6-7" onclick="delete_from_cart(20500);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11.583" height="11.583"
+                                         viewBox="0 0 11.583 11.583" class="snipcss0-4-7-8">
+                                        <g transform="translate(-7.783 -7.783)" class="snipcss0-5-8-9">
+                                            <path d="M9.2,17.952,17.952,9.2" transform="translate(0 0)">
+                                            </path>
+                                            <path d="M9.2,9.2l8.755,8.755" transform="translate(0 0)">
+                                            </path>
+                                        </g>
                                     </svg>
                                 </div>
-                                <div class="piece snipcss0-4-14-17">
-                                    <input type="number" step="1" name="adet" value="1" data-update-qty="20500" min="1"
-                                           class="snipcss0-5-17-18">
-                                    <span class="snipcss0-5-17-19">
-                                        Adet
-                                    </span>
+                                <a href="tr/urun/rampage-v902-ps3-ps4-pc-xboxone-xbox360-switch-3-pedalli-el-vitesli-gaming-oyuncu-direksiyonu"
+                                   class="snipcss0-3-6-10">
+                                    <img src="@bItem.Product.BaseImagePath"
+                                         alt="Rampage V902 PS3/PS4/PC/XBOXONE/XBOX360 /SWITCH 3 Pedallı -El Vitesli Gaming Oyuncu Direksiyonu"
+                                         class="snipcss0-4-10-11">
+                                </a>
+                                <div class="num snipcss0-3-6-12">
+                                    @bItem.Product.Id
                                 </div>
-                                <div class="qty-minus snipcss0-4-14-20">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
-                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-20-21">
-                                        <path d="M8.963,8.942l-7.841,7.82a.657.657,0,0,1-.928-.931L7.568,8.477.193,1.122a.657.657,0,0,1,.928-.93L8.963,8.011a.657.657,0,0,1,0,.93Z"
-                                              transform="translate(0)" fill="#fff">
-                                        </path>
-                                    </svg>
+                                <a href="tr/urun/rampage-v902-ps3-ps4-pc-xboxone-xbox360-switch-3-pedalli-el-vitesli-gaming-oyuncu-direksiyonu"
+                                   class="p-name snipcss0-3-6-13">
+                                    @bItem.Product.Name
+                                </a>
+                                <div class="qty snipcss0-3-6-14">
+                                    <a asp-action="AddToBasket" asp-controller="Shop" asp-route-id="@bItem.Product.Id" class="qty-plus snipcss0-4-14-15">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
+                                             viewBox="0 0 9.156 16.953" class="snipcss0-5-15-16">
+                                            <path d="M126.7,8.011,118.864.192a.657.657,0,0,0-.928.931l7.375,7.354-7.375,7.354a.657.657,0,0,0,.928.93L126.7,8.942a.657.657,0,0,0,0-.93Z"
+                                                  transform="translate(-117.742 0)" fill="#fff">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <div class="piece snipcss0-4-14-17">
+                                        <input type="number" step="1" name="adet" value="@bItem.Count" data-update-qty="20500" min="1"
+                                               class="snipcss0-5-17-18">
+                                        <span class="snipcss0-5-17-19">
+                                            Adet
+                                        </span>
+                                    </div>
+                                    <a asp-action="Decrease" asp-controller="Shop" asp-route-id="@bItem.Product.Id" class="qty-minus snipcss0-4-14-20">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
+                                             viewBox="0 0 9.156 16.953" class="snipcss0-5-20-21">
+                                            <path d="M8.963,8.942l-7.841,7.82a.657.657,0,0,1-.928-.931L7.568,8.477.193,1.122a.657.657,0,0,1,.928-.93L8.963,8.011a.657.657,0,0,1,0,.93Z"
+                                                  transform="translate(0)" fill="#fff">
+                                            </path>
+                                        </svg>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="price snipcss0-3-6-22">
-                                <p class="snipcss0-4-22-23">
-                                    6.999,00 TL
-                                </p>
-                            </div>
-                        </div>
-                        <div class="product-item snipcss0-2-5-24">
-                            <div class="delete snipcss0-3-24-25" onclick="delete_from_cart(20503);">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="11.583" height="11.583"
-                                     viewBox="0 0 11.583 11.583" class="snipcss0-4-25-26">
-                                    <g transform="translate(-7.783 -7.783)" class="snipcss0-5-26-27">
-                                        <path d="M9.2,17.952,17.952,9.2" transform="translate(0 0)">
-                                        </path>
-                                        <path d="M9.2,9.2l8.755,8.755" transform="translate(0 0)">
-                                        </path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <a href="tr/urun/rampage-drive-rs-ps4-pc-xbox-one-xbox-series-s-x-yayli-3-pedal-el-vitesi-gaming-oyun-direksiyonu"
-                               class="snipcss0-3-24-28">
-                                <img src="https://www.rampage.com.tr/rampage2/dosyalar/urun/754/7867_k.png?m=1691832366"
-                                     alt="Rampage DRIVE RS+ PS4/PC/XBOX ONE/Xbox Series S/X Yaylı 3 Pedal -El Vitesi Gaming Oyun Direksiyonu"
-                                     class="snipcss0-4-28-29">
-                            </a>
-                            <div class="num snipcss0-3-24-30">
-                                37616
-                            </div>
-                            <a href="tr/urun/rampage-drive-rs-ps4-pc-xbox-one-xbox-series-s-x-yayli-3-pedal-el-vitesi-gaming-oyun-direksiyonu"
-                               class="p-name snipcss0-3-24-31">
-                                Rampage DRIVE RS+ PS4/PC/XBOX ONE/Xbox Series S/X Yaylı 3 Pedal -El Vitesi Gaming Oyun
-                                Direksiyonu
-                            </a>
-                            <div class="qty snipcss0-3-24-32">
-                                <div class="qty-plus snipcss0-4-32-33">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
-                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-33-34">
-                                        <path d="M126.7,8.011,118.864.192a.657.657,0,0,0-.928.931l7.375,7.354-7.375,7.354a.657.657,0,0,0,.928.93L126.7,8.942a.657.657,0,0,0,0-.93Z"
-                                              transform="translate(-117.742 0)" fill="#fff">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div class="piece snipcss0-4-32-35">
-                                    <input type="number" step="1" name="adet" value="1" data-update-qty="20503" min="1"
-                                           class="snipcss0-5-35-36">
-                                    <span class="snipcss0-5-35-37">
-                                        Adet
-                                    </span>
-                                </div>
-                                <div class="qty-minus snipcss0-4-32-38">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
-                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-38-39">
-                                        <path d="M8.963,8.942l-7.841,7.82a.657.657,0,0,1-.928-.931L7.568,8.477.193,1.122a.657.657,0,0,1,.928-.93L8.963,8.011a.657.657,0,0,1,0,.93Z"
-                                              transform="translate(0)" fill="#fff">
-                                        </path>
-                                    </svg>
+                                <div class="price snipcss0-3-6-22">
+                                    <p class="snipcss0-4-22-23">
+                                        @bItem.Product.Price TL
+                                    </p>
                                 </div>
                             </div>
-                            <div class="price snipcss0-3-24-40">
-                                <p class="snipcss0-4-40-41">
-                                    11.399,00 TL
-                                </p>
-                            </div>
-                        </div>
-                        <div class="product-item snipcss0-2-5-42">
-                            <div class="delete snipcss0-3-42-43" onclick="delete_from_cart(20504);">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="11.583" height="11.583"
-                                     viewBox="0 0 11.583 11.583" class="snipcss0-4-43-44">
-                                    <g transform="translate(-7.783 -7.783)" class="snipcss0-5-44-45">
-                                        <path d="M9.2,17.952,17.952,9.2" transform="translate(0 0)">
-                                        </path>
-                                        <path d="M9.2,9.2l8.755,8.755" transform="translate(0 0)">
-                                        </path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <a href="tr/urun/rampage-v900-s-ps3-ps4-pc-xboxone-xbox360-switch-6-in-1-pedalli-gaming-oyuncu-direksiyonu"
-                               class="snipcss0-3-42-46">
-                                <img src="https://www.rampage.com.tr/rampage2/dosyalar/urun/311/4729_k.png?m=1684663866"
-                                     alt="Rampage V900-S PS3/PS4/PC/XBOXONE/XBOX360 SWITCH 6 in 1 Pedallı Gaming Oyuncu Direksiyonu"
-                                     class="snipcss0-4-46-47">
-                            </a>
-                            <div class="num snipcss0-3-42-48">
-                                32939
-                            </div>
-                            <a href="tr/urun/rampage-v900-s-ps3-ps4-pc-xboxone-xbox360-switch-6-in-1-pedalli-gaming-oyuncu-direksiyonu"
-                               class="p-name snipcss0-3-42-49">
-                                Rampage V900-S PS3/PS4/PC/XBOXONE/XBOX360 SWITCH 6 in 1 Pedallı Gaming Oyuncu
-                                Direksiyonu
-                            </a>
-                            <div class="qty snipcss0-3-42-50">
-                                <div class="qty-plus snipcss0-4-50-51">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
-                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-51-52">
-                                        <path d="M126.7,8.011,118.864.192a.657.657,0,0,0-.928.931l7.375,7.354-7.375,7.354a.657.657,0,0,0,.928.93L126.7,8.942a.657.657,0,0,0,0-.93Z"
-                                              transform="translate(-117.742 0)" fill="#fff">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div class="piece snipcss0-4-50-53">
-                                    <input type="number" step="1" name="adet" value="1" data-update-qty="20504" min="1"
-                                           class="snipcss0-5-53-54">
-                                    <span class="snipcss0-5-53-55">
-                                        Adet
-                                    </span>
-                                </div>
-                                <div class="qty-minus snipcss0-4-50-56">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
-                                         viewBox="0 0 9.156 16.953" class="snipcss0-5-56-57">
-                                        <path d="M8.963,8.942l-7.841,7.82a.657.657,0,0,1-.928-.931L7.568,8.477.193,1.122a.657.657,0,0,1,.928-.93L8.963,8.011a.657.657,0,0,1,0,.93Z"
-                                              transform="translate(0)" fill="#fff">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="price snipcss0-3-42-58">
-                                <p class="snipcss0-4-58-59">
-                                    5.199,00 TL
-                                </p>
-                            </div>
-                        </div>
+                        }
                     </div>
                     <div class="basket-bottom ">
                         <p class="">
                             <b class="">
                                 Toplam:
                             </b>
-                            23.597,00 TL
+                            @totalPrice TL
                         </p>
                         <a href="/basket.html" class="odeme-yap">
                             Ödeme Yap
@@ -288,7 +179,7 @@
         <div class="shop-item-container">
             <div class="all-boxes-item">
                 <ul>
-                    @for (int i = 0; i <= 3; i++)
+                    @for (int i = 0; i <= 3 && i<categories.Count; i++)
                     {
                         var category = categories[i];
                         <li>
@@ -303,7 +194,7 @@
 
                 </ul>
                 <ul>
-                    @for (int i = 4; i <= 7; i++)
+                    @for (int i = 4; i <= 7 && i < categories.Count; i++)
                     {
                         var category = categories[i];
                         <li>
@@ -316,7 +207,7 @@
                     }
                 </ul>
                 <ul>
-                    @for (int i = 8; i <= 11; i++)
+                    @for (int i = 8; i <= 11 && i < categories.Count; i++)
                     {
                         var category = categories[i];
                         <li>
