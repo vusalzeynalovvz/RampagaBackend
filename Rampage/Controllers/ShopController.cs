@@ -19,20 +19,46 @@ public class ShopController : Controller
         _contextAccessor = contextAccessor;
     }
 
-    public async Task<IActionResult> Index(int? categoryId)
+    public async Task<IActionResult> Index(int? categoryId, int? colorId)
     {
+
+        ViewBag.CategoryId = categoryId;
+        ViewBag.ColorId = colorId;
         var query = _context.Products.Include(x => x.Category).AsQueryable();
         ShopVM vm = new();
         if (categoryId is not null)
         {
-            var category = await _context.Categories.FirstOrDefaultAsync(x => x.Id == categoryId);
+            var category = await _context.Categories.Include(x => x.ParentCategory).FirstOrDefaultAsync(x => x.Id == categoryId);
             if (category is null)
                 return NotFound();
             vm.Category = category;
-            query = query.Where(x => x.Category.ParentCategoryId == categoryId);
+
+            if (category.ParentCategoryId is not null)
+            {
+                vm.ChildCategory = category;
+                vm.Category = category.ParentCategory;
+                query = query.Where(x => x.CategoryId == categoryId);
+            }
+            else
+                query = query.Where(x => x.Category.ParentCategoryId == categoryId);
+        }
+        if (colorId is not null)
+        {
+            var color = await _context.Colors.FirstOrDefaultAsync(x => x.Id == colorId);
+            if (color is null)
+                return NotFound();
+
+            vm.Color = color;
+            query = query.Where(x => x.ColorId == colorId);
         }
         var products = await query.ToListAsync();
         vm.Products = products;
+        vm.Categories = await _context.Categories.Where(x => x.ParentCategoryId == null).Include(x => x.ChildCategories).ToListAsync();
+        vm.Colors = await _context.Colors.ToListAsync();
+
+
+        if (vm.Category is not null)
+            vm.Categories.Remove(vm.Category);
         return View(vm);
     }
 

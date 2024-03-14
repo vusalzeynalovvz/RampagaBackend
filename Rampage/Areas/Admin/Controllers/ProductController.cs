@@ -75,9 +75,9 @@ public class ProductController : Controller
 
 
 
-        if (!vm.BGImage.ValidateImage(2))
+        if (!vm.BGImage.ValidateImage(10))
         {
-            ModelState.AddModelError("BGImage", "Resim doğru formatda ve boyutu 2 mb dan az olmalıdır");
+            ModelState.AddModelError("BGImage", "Resim doğru formatda ve boyutu 10 mb dan az olmalıdır");
             return View(vm);
         }
 

@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Rampage.Areas.Admin.Utilities.Helpers;
 using Rampage.Database.DomainModels;
 using Rampage.ViewModels;
+using System.Security.Claims;
 
 namespace Rampage.Controllers;
 
@@ -20,10 +22,65 @@ public class AccountController : Controller
         _mailKitHelper = mailKitHelper;
     }
 
+
+
+
+
+
+    [Authorize]
+    public async Task<IActionResult> UserInfo()
+    {
+        var id = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        var user = await _userManager.FindByIdAsync(id);
+        if (user is null)
+        {
+            await _signInManager.SignOutAsync();
+            return BadRequest();    
+        }
+
+
+
+        return View(user);
+    }
+
+
+
+
+    [Authorize]
+    public async Task<IActionResult> ChangePassword(string oldPassword, string newPassword)
+    {
+        if (!ModelState.IsValid)
+            return RedirectToAction("UserInfo");
+
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        var user=await _userManager.FindByIdAsync(userId);
+
+        var result=await _userManager.ChangePasswordAsync(user, oldPassword, newPassword);
+
+        if (result.Succeeded)
+            return RedirectToAction("Index","Home");
+
+        return BadRequest();
+
+    }
+
+
+
     public IActionResult Login()
     {
         return View();
     }
+
+    [Authorize]
+    public async Task<IActionResult> Logout()
+    {
+        await _signInManager.SignOutAsync();
+
+        return RedirectToAction("Login");
+    }
+
 
     [HttpPost]
     public async Task<IActionResult> Login(LoginVM vm)
@@ -56,10 +113,6 @@ public class AccountController : Controller
         return RedirectToAction("Index", "home");
     }
 
-    public IActionResult UserInfo()
-    {
-        return View();
-    }
 
     public IActionResult Register()
     {

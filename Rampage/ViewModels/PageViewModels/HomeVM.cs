@@ -27,4 +27,8 @@ public class ShopVM
 {
     public List<Product> Products  { get; set; } = new();
     public Category? Category  { get; set; }
+    public Category? ChildCategory  { get; set; }
+    public List<Category> Categories { get; set; } = new();
+    public List<Color> Colors { get; set; } = new();
+    public Color? Color { get; set; }
 }
