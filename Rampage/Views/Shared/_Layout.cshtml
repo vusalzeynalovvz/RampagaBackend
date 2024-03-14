@@ -23,7 +23,8 @@
     <!-- Demo styles -->
     <link rel="stylesheet" href="~/assets/css/style.css">
     <link rel="stylesheet" href="~/assets/css/about.css">
-    <link rel="stylesheet" href="~/assets/css/basket.css">
+    <link rel="stylesheet" href="~/assets/css/basketsepet.css">
+    <link rel="stylesheet" href="~/assets/css/basketteslimat.css">
     <link rel="stylesheet" href="~/assets/css/blog.css">
     <link rel="stylesheet" href="~/assets/css/contact.css">
     <link rel="stylesheet" href="~/assets/css/login.css">
@@ -70,7 +71,7 @@
                 </li>
                 <li class="basket_click">
                     <i class="fa-solid fa-bag-shopping"></i>
-                    <span class="quantity">1</span>
+                    <span class="quantity">@basketItems.Count</span>
                 </li>
                 <li>
                     <i class="fa-solid fa-magnifying-glass search-open-icon"></i>
@@ -96,7 +97,7 @@
                         {
                             totalPrice += (bItem.Product.Price * bItem.Count);
                             <div class="product-item snipcss0-2-5-6">
-                                <div class="delete snipcss0-3-6-7" onclick="delete_from_cart(20500);">
+                                <a asp-action="RemoveBasketItem" asp-controller="Shop" asp-route-id="@bItem.Id" asp-route-returnAction="@Context.Request.Path.Value" class="delete snipcss0-3-6-7" onclick="delete_from_cart(20500);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="11.583" height="11.583"
                                          viewBox="0 0 11.583 11.583" class="snipcss0-4-7-8">
                                         <g transform="translate(-7.783 -7.783)" class="snipcss0-5-8-9">
@@ -106,7 +107,7 @@
                                             </path>
                                         </g>
                                     </svg>
-                                </div>
+                                </a>
                                 <a href="tr/urun/rampage-v902-ps3-ps4-pc-xboxone-xbox360-switch-3-pedalli-el-vitesli-gaming-oyuncu-direksiyonu"
                                    class="snipcss0-3-6-10">
                                     <img src="@bItem.Product.BaseImagePath"
@@ -121,7 +122,7 @@
                                     @bItem.Product.Name
                                 </a>
                                 <div class="qty snipcss0-3-6-14">
-                                    <a asp-action="AddToBasket" asp-controller="Shop" asp-route-id="@bItem.Product.Id" class="qty-plus snipcss0-4-14-15">
+                                    <a asp-action="AddToBasket" asp-controller="Shop" asp-route-id="@bItem.Product.Id" asp-route-returnAction="@Context.Request.Path.Value" class="qty-plus snipcss0-4-14-15">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
                                              viewBox="0 0 9.156 16.953" class="snipcss0-5-15-16">
                                             <path d="M126.7,8.011,118.864.192a.657.657,0,0,0-.928.931l7.375,7.354-7.375,7.354a.657.657,0,0,0,.928.93L126.7,8.942a.657.657,0,0,0,0-.93Z"
@@ -136,7 +137,7 @@
                                             Adet
                                         </span>
                                     </div>
-                                    <a asp-action="Decrease" asp-controller="Shop" asp-route-id="@bItem.Product.Id" class="qty-minus snipcss0-4-14-20">
+                                    <a asp-action="Decrease" asp-controller="Shop" asp-route-id="@bItem.Product.Id" asp-route-returnAction="@Context.Request.Path.Value" class="qty-minus snipcss0-4-14-20">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
                                              viewBox="0 0 9.156 16.953" class="snipcss0-5-20-21">
                                             <path d="M8.963,8.942l-7.841,7.82a.657.657,0,0,1-.928-.931L7.568,8.477.193,1.122a.657.657,0,0,1,.928-.93L8.963,8.011a.657.657,0,0,1,0,.93Z"
@@ -160,7 +161,7 @@
                             </b>
                             @totalPrice TL
                         </p>
-                        <a href="/basket.html" class="odeme-yap">
+                        <a asp-action="Index" asp-controller="Basket" class="odeme-yap">
                             Ödeme Yap
                             <svg xmlns="http://www.w3.org/2000/svg" width="28.615" height="16.436"
                                  viewBox="0 0 28.615 16.436" class="snipcss0-3-63-64">
@@ -233,6 +234,67 @@
     </header>
     <!-- Header Sections End -->
     @RenderBody()
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="footer-all">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="~/assets/image/rampage-logo (1).svg" alt="Rampage logo">
+                </div>
+                <div class="footer-email">
+                    <a href="#">info@rampage.com.tr</a>
+                </div>
+                <form asp-action="Subscribe" asp-controller="Home" asp-route-returnAction="@Context.Request.Path.Value" class="footer-send-email">
+                    <div class="buttons">
+                        <span>Katıl</span>
+                        <span>Ayrıl</span>
+                    </div>
+                    <div class="input-box" >
+                        <input type="text" style="color:white" name="email" placeholder="E-posta Adresiniz">
+                    </div>
+                    <div class="send-email">
+                        <button type="submit">Gönder</button>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-mid">
+                <div class="links">
+                    <a href="#">Hakkımızda </a>
+                    <a href="#">Destek </a>
+                    <a href="#">İletişim </a>
+                    <a href="#">Bloglar</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="policys">
+                    <a href="#">Gizlilik ve Çerez Politikası</a>
+                    <a href="#">KVKK ve Aydınlatma Metni</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 RAMPAGE</span>
+                <p>TR/GLOBAL</p>
+                <p>Web Tasarim By Vusaal</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Start -->
 
 </body>
 

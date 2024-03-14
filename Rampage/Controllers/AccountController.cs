@@ -40,20 +40,20 @@ public class AccountController : Controller
             return View(vm);
         }
 
-        var result = await _signInManager.PasswordSignInAsync(user, vm.Password, false,true);
-            
+        var result = await _signInManager.PasswordSignInAsync(user, vm.Password, false, true);
+
         if (!result.Succeeded)
         {
-            if(!user.EmailConfirmed)
+            if (!user.EmailConfirmed)
                 ModelState.AddModelError("", "E-posta adresini onayladıktan sonra giriş yapa bilirsiniz");
-            else if(result.IsLockedOut)
+            else if (result.IsLockedOut)
                 ModelState.AddModelError("", "User engellendi 5 dakika sonra yeniden deneyin");
             else
                 ModelState.AddModelError("", "Email ve ya şifre yanlış.");
             return View(vm);
         }
 
-        return RedirectToAction("Index","home");
+        return RedirectToAction("Index", "home");
     }
 
     public IActionResult UserInfo()
@@ -89,6 +89,8 @@ public class AccountController : Controller
             }
             return View(vm);
         }
+
+        await _userManager.AddToRoleAsync(user, "Member");
 
 
         string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -132,6 +134,13 @@ public class AccountController : Controller
 
 
 
+    public async Task<IActionResult> CreateRoles()
+    {
+        await _roleManager.CreateAsync(new() { Name = "Admin" });
+        await _roleManager.CreateAsync(new() { Name = "Member" });
+
+        return RedirectToAction("Index", "Home");
+    }
 
 
 

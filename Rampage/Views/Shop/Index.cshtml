@@ -742,7 +742,7 @@
                                     </div>
                                     <div class="product-add-basket" style="display: flex; text-align: center; padding-right: 20px;">
                                         <div style="margin: 0 auto;">
-                                            <a asp-action="AddToBasket" asp-route-id="@product.Id">Sepete Ekle</a>
+                                            <a asp-action="AddToBasket" asp-route-id="@product.Id" asp-route-returnAction="@Context.Request.Path.Value">Sepete Ekle</a>
                                             <span>+</span>
                                         </div>
                                     </div>
@@ -759,70 +759,10 @@
         </div>
     </section>
 </main>
-<!-- Footer Start -->
-<footer>
-    <div class="footer-all">
-        <div class="footer-top">
-            <div class="footer-logo">
-                <img src="~/assets/image/rampage-logo (1).svg" alt="Rampage logo">
-            </div>
-            <div class="footer-email">
-                <a href="#">info@rampage.com.tr</a>
-            </div>
-            <div class="footer-send-email">
-                <div class="buttons">
-                    <span>Katıl</span>
-                    <span>Ayrıl</span>
-                </div>
-                <div class="input-box">
-                    <input type="text" name="eposta" placeholder="E-posta Adresiniz">
-                </div>
-                <div class="send-email">
-                    <button>Gönder</button>
-                </div>
-            </div>
-        </div>
-        <div class="footer-mid">
-            <div class="links">
-                <a href="#">Hakkımızda </a>
-                <a href="#">Destek </a>
-                <a href="contact.html">İletişim </a>
-                <a href="#">Bloglar</a>
-            </div>
-            <div class="social-icons">
-                <a href="#">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-            </div>
-            <div class="policys">
-                <a href="#">Gizlilik ve Çerez Politikası</a>
-                <a href="#">KVKK ve Aydınlatma Metni</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2024 RAMPAGE</span>
-            <p>TR/GLOBAL</p>
-            <p>Web Tasarim By Vusaal</p>
-        </div>
-    </div>
-</footer>
-<!-- Footer Start -->
 <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
 <script src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="assets/js/shop.js"></script>
+<script src="~/assets/js/shop.js"></script>
 <!-- <script src="assets/js/main.js"></script> -->

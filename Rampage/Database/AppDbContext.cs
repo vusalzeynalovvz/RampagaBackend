@@ -21,4 +21,5 @@ public class AppDbContext : IdentityDbContext<AppUser>
     public DbSet<BlogCategory> BlogCategories { get; set; } = null!;
     public DbSet<Blog> Blogs  { get; set; } = null!;
     public DbSet<BasketItem> BasketItems  { get; set; } = null!;
+    public DbSet<Subscribe> Subscribes   { get; set; } = null!;
 }

@@ -1,0 +1,42 @@
+﻿@model List<Subscribe>
+@{
+    int Count = 1;
+}
+<!-- Table Start -->
+<div class="container-fluid pt-4 px-4">
+
+    <div class="col-12">
+        <div class="bg-secondary rounded h-100 p-4">
+            <h6 class="mb-4">Abonelikler</h6>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Eylemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Subscribe subscribe in Model)
+                        {
+                            <tr>
+                                <th scope="row">@(Count++)</th>
+                                <td>@subscribe.Email</td>
+                                <td>
+                                    <a asp-action="Delete" asp-route-id="@subscribe.Id" class="btn btn-danger">Sil</a>
+                                </td>
+                            </tr>
+
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<!-- Table End -->
+<!-- Content End -->

@@ -75,7 +75,7 @@ public class ShopController : Controller
         if (returnAction is null)
             return RedirectToAction("Index");
 
-        return RedirectToAction(returnAction);
+        return Redirect(returnAction);
     }
 
     [Authorize]
@@ -101,7 +101,48 @@ public class ShopController : Controller
         if (returnAction is null)
             return RedirectToAction("Index");
 
-        return RedirectToAction(returnAction);
+        return Redirect(returnAction);
+    }
+
+
+    [Authorize]
+    public async Task<IActionResult> RemoveBasketItem(int id, string? returnAction)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        if (userId is null)
+            return Unauthorized();
+
+        var bItem = await _context.BasketItems.FirstOrDefaultAsync(x => x.Id == id && x.AppUserId == userId);
+
+        if (bItem is null)
+            return NotFound();
+
+
+        _context.Remove(bItem);
+        await _context.SaveChangesAsync();
+
+        if (returnAction is null)
+            return RedirectToAction("Index");
+
+        return Redirect(returnAction);
+    }
+
+    [Authorize]
+    public async Task<IActionResult> ClearBasket()
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        if (userId is null)
+            return Unauthorized();
+
+        var bItems = await _context.BasketItems.Where(x => x.AppUserId == userId).ToListAsync();
+
+
+        _context.BasketItems.RemoveRange(bItems);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("Index", "Basket");
     }
 }
 

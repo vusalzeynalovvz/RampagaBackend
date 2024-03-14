@@ -1215,7 +1215,7 @@ main .card-toggle-section .category-cards1 .category-card .category-add-basket {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-main .card-toggle-section .category-cards1 .category-card .category-add-basket span {
+main .card-toggle-section .category-cards1 .category-card .category-add-basket a {
   display: inline-block;
   font-weight: bold;
   font-size: 19px;
