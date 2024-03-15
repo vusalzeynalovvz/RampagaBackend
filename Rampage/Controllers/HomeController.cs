@@ -20,9 +20,9 @@ public class HomeController : Controller
     {
         HomeVM vm = new()
         {
-            NewProducts = await _context.Products.OrderByDescending(x => x.Id).Take(2).ToListAsync(),
-            PopularProducts = await _context.Products.OrderBy(x => x.SalesCount).Take(2).ToListAsync(),
-            SpecialProducts = await _context.Products.OrderByDescending(x => x.Price).Take(2).ToListAsync(),
+            NewProducts = await _context.Products.Include(x => x.Comments).OrderByDescending(x => x.Id).Take(2).ToListAsync(),
+            PopularProducts = await _context.Products.Include(x=>x.Comments).OrderBy(x => x.SalesCount).Take(2).ToListAsync(),
+            SpecialProducts = await _context.Products.Include(x => x.Comments).OrderByDescending(x => x.Price).Take(2).ToListAsync(),
             Sliders = await _context.Sliders.ToListAsync(),
             Categories = await _context.Categories.Take(4).ToListAsync(),
             SpecialCategories = await _context.Categories.Where(x => x.ParentCategoryId != null).Include(x => x.Products).OrderByDescending(x => x.Products.Count).Take(4).ToListAsync(),

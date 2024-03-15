@@ -137,16 +137,20 @@
                                     </div>
                                     <div class="total-rating">
                                         <div class="total-star">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
+                                            @for (int i = 0; i < @product.Rating; i++)
+                                            {
+                                                <i class="fa-solid fa-star"></i>
+
+                                            }
+                                            @for (int i = 0; i < 5 - product.Rating; i++)
+                                            {
+
+                                                <i class="fa-regular fa-star"></i>
+                                            }
                                         </div>
-                                        <span>5</span>
-                                        <p>2</p>
-                                    </div>
-                                    <div class="product-price">
+                                        <span>@product.Rating</span>
+                                        <p>@product.Comments.Count</p>
+                                    </div>                                    <div class="product-price">
                                         <span>@product.Price TL</span>
                                     </div>
                                     <div class="product-add-basket">
@@ -182,14 +186,19 @@
                                     </div>
                                     <div class="total-rating">
                                         <div class="total-star">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
+                                            @for (int i = 0; i < @product.Rating; i++)
+                                            {
+                                                <i class="fa-solid fa-star"></i>
+
+                                            }
+                                            @for (int i = 0; i < 5 - product.Rating; i++)
+                                            {
+
+                                                <i class="fa-regular fa-star"></i>
+                                            }
                                         </div>
-                                        <span>5</span>
-                                        <p>2</p>
+                                        <span>@product.Rating</span>
+                                        <p>@product.Comments.Count</p>
                                     </div>
                                     <div class="product-price">
                                         <span>@product.Price TL</span>
@@ -229,14 +238,19 @@
                                     </div>
                                     <div class="total-rating">
                                         <div class="total-star">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
+                                            @for (int i = 0; i < @product.Rating; i++)
+                                            {
+                                                <i class="fa-solid fa-star"></i>
+
+                                            }
+                                            @for (int i = 0; i < 5 - product.Rating; i++)
+                                            {
+
+                                                <i class="fa-regular fa-star"></i>
+                                            }
                                         </div>
-                                        <span>5</span>
-                                        <p>2</p>
+                                        <span>@product.Rating</span>
+                                        <p>@product.Comments.Count</p>
                                     </div>
                                     <div class="product-price">
                                         <span>@product.Price TL</span>

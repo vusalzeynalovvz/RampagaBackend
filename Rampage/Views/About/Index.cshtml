@@ -1,4 +1,5 @@
-﻿   <!-- Main Start -->
+﻿@model List<Comment>
+   <!-- Main Start -->
 <main>
     <section class="about-home">
         <div class="about-img-container">
@@ -104,94 +105,34 @@
         <div class="user-comment-boxs">
             <div class="swiper user-comment-slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="user-comment-box">
-                            <span>
-                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
-                                Gaming Oyuncu Kasası
-                            </span>
-                            <div class="user-comment-image">
-                                <img src="~/assets/image/usercommentimage1.png" alt="Kasa">
-                            </div>
-                            <div class="user-comment-text">
-                                <div class="user-name-date">
-                                    <div class="user-name">SERTAÇ Güngör</div>
-                                    <div class="user-date">21/11/2023</div>
+                    @foreach (var comment in Model)
+                    {
+                        <div style="max-width:430px" class="swiper-slide">
+                            <div class="user-comment-box">
+                                <span>
+                                    @comment.Product.Name
+                                </span>
+                                <div class="user-comment-image">
+                                    <img src="@comment.Product.BaseImagePath" alt="Kasa">
                                 </div>
-                                <div class="user-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
+                                <div class="user-comment-text">
+                                    <div class="user-name-date">
+                                        <div class="user-name">@comment.AppUser.FullName</div>
+                                        <div class="user-date">@comment.CreatedTime.ToString().Substring(0, 10)</div>
+                                    </div>
+                                    <div class="user-stars">
+                                        @for (int i = 0; i < comment.Rating; i++)
+                                        {
+                                            <i class="fa-solid fa-star"></i>
+                                        }
+                                    </div>
+                                    <p>
+                                        @comment.Title
+                                    </p>
                                 </div>
-                                <p>
-                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
-                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
-                                    serin.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="user-comment-box">
-                            <span>
-                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
-                                Gaming Oyuncu Kasası
-                            </span>
-                            <div class="user-comment-image">
-                                <img src="~/assets/image/usercommentimage1.png" alt="Kasa">
-                            </div>
-                            <div class="user-comment-text">
-                                <div class="user-name-date">
-                                    <div class="user-name">SERTAÇ Güngör</div>
-                                    <div class="user-date">21/11/2023</div>
-                                </div>
-                                <div class="user-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>
-                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
-                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
-                                    serin.
-                                </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="user-comment-box">
-                            <span>
-                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
-                                Gaming Oyuncu Kasası
-                            </span>
-                            <div class="user-comment-image">
-                                <img src="~/assets/image/usercommentimage1.png" alt="Kasa">
-                            </div>
-                            <div class="user-comment-text">
-                                <div class="user-name-date">
-                                    <div class="user-name">SERTAÇ Güngör</div>
-                                    <div class="user-date">21/11/2023</div>
-                                </div>
-                                <div class="user-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>
-                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
-                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
-                                    serin.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
