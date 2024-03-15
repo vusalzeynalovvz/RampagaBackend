@@ -136,7 +136,7 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                         </div>
-                        <div class="price-range">
+                    @*     <div class="price-range">
                             <span class="price-title">Fiyat Aralığı</span>
                             <div class="values">
                                 <div>$<span id="first"></span></div>
@@ -144,7 +144,7 @@
                             </div>
                             <div class="slider" data-value-0="#first" data-value-1="#second" data-range="#third">
                             </div>
-                        </div>
+                        </div> *@
                         <div class="product-color">
                             <div class="color-title">
                                 <span>Renkler</span>
@@ -179,7 +179,7 @@
                     <div class="product-list">
                         @foreach (Product product in Model.Products)
                         {
-                            <div class="swiper-slide">
+                            <div style="min-width:305px" class="swiper-slide">
                                 <a asp-action="Detail" asp-route-id="@product.Id" class="product-box-swipper">
                                     <div class="product-title">
                                         <span>@product.Name</span>

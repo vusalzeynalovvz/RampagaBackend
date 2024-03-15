@@ -1,0 +1,87 @@
+﻿@model BlogDetailVM
+<main>
+    <section class="about-main-container">
+        <div class="main-box-item03">
+            <div class="blog-categories-all">
+                <div class="into-blog-cate">
+                    <div class="blog-cate-title">
+                        <img src="/assets/image/news-icon.png" alt="Rampage Logo">
+                        <span>Kategoriler</span>
+                    </div>
+
+                    <div class="blog-list">
+                        <ul>
+
+                            <li>
+                                <a asp-action="Index" asp-controller="Blog" asp-route-id="@null">
+                                    <span class="news-cont"></span>
+                                    <span>Tümü</span>
+                                </a>
+                            </li>
+                            @foreach (var category in Model.BlogCategories)
+                            {
+                                <li>
+                                    <a asp-action="Index" asp-controller="Blog" asp-route-id="@category.Id">
+                                        <span class="news-cont">@category.Blogs.Count</span>
+                                        <span>@category.Name</span>
+                                    </a>
+                                </li>
+
+                            }
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="main-box-item02">
+            <div class="header">
+                <div class="header-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10.151" height="15" viewBox="0 0 10.151 15">
+                        <path d="M6.824,0H2.288C-.344,0-.547,2.366.874,3.654l7.364,6.692C9.66,11.634,9.456,14,6.824,14H2.288C-.344,14-.547,11.634.874,10.346L8.238,3.654C9.66,2.366,9.456,0,6.824,0Z"
+                              transform="translate(0.519 0.5)"></path>
+                    </svg>
+                </div>
+                <span>@Model.Blog.CreatedTime.ToString().Substring(0, 10)</span>
+            </div>
+            <div class="title">
+                <h2>
+                    @Model.Blog.Name
+                </h2>
+            </div>
+            <div class="cnt">
+                <p>
+
+                </p>
+            </div>
+            <div class="content">
+                <img src="@Model.Blog.ImagePath" alt="">
+            </div>
+            <div class="text-content">
+                <p>
+                    @Model.Blog.Description
+                </p>
+
+
+                <p>Keyifli oyunlar dileriz!</p>
+
+                <p>Rampage Ekibi</p>
+            </div>
+        </div>
+        <div class="main-box-item01">
+            <div class="contact-box-1">
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>Paylaş</span>
+            </div>
+            <div class="contact-icon">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+</main>

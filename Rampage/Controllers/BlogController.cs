@@ -34,6 +34,25 @@ public class BlogController : Controller
 
         return View(vm);
     }
+
+
+    public async Task<IActionResult> Detail(int id)
+    {
+        var blog = await _context.Blogs.FirstOrDefaultAsync(x => x.Id == id);
+        if (blog is null)
+            return NotFound();
+
+        var categories = await _context.BlogCategories.Include(x => x.Blogs).ToListAsync();
+
+
+        BlogDetailVM vm = new()
+        {
+            Blog = blog,
+            BlogCategories = categories,
+        };
+
+        return View(vm);
+    }
 }
 
 

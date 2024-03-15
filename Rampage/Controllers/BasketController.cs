@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Rampage.Database;
 using Rampage.Database.DomainModels;
 using Rampage.ViewModels;
+using Stripe;
 using System.Security.Claims;
 
 namespace Rampage.Controllers;
@@ -11,10 +13,11 @@ namespace Rampage.Controllers;
 public class BasketController : Controller
 {
     private readonly AppDbContext _context;
-
-    public BasketController(AppDbContext context)
+    private readonly UserManager<AppUser> _userManager;
+    public BasketController(AppDbContext context, UserManager<AppUser> userManager)
     {
         _context = context;
+        _userManager = userManager;
     }
     [Authorize]
     public async Task<IActionResult> Index()
@@ -53,7 +56,7 @@ public class BasketController : Controller
 
     [Authorize]
     [HttpPost]
-    public async Task<IActionResult> Order(OrderVM vm)
+    public async Task<IActionResult> Order(OrderVM vm,string stripeToken)
     {
 
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -104,6 +107,31 @@ public class BasketController : Controller
 
         });
 
+        var user = await _userManager.FindByIdAsync(userId);
+
+        var optionCust = new CustomerCreateOptions
+        {
+            Email = user.Email,
+            Name = user.FullName,
+            Phone = vm.PhoneNumber
+        };
+        var serviceCust = new CustomerService();
+        Customer customer = serviceCust.Create(optionCust);
+
+        total = total * 100;
+        var optionsCharge = new ChargeCreateOptions
+        {
+
+            Amount = (long)total,
+            Currency = "USD",
+            Description = "Product Selling amount",
+            Source = stripeToken,
+            ReceiptEmail = user.Email
+
+
+        };
+        var serviceCharge = new ChargeService();
+        Charge charge = serviceCharge.Create(optionsCharge);
 
 
 

@@ -461,6 +461,18 @@
       "PackagePath": "staticwebassets\\assets\\css\\about.scss"
     },
     {
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\aboutpage.css",
+      "PackagePath": "staticwebassets\\assets\\css\\aboutpage.css"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\aboutpage.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\aboutpage.css.map"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\aboutpage.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\aboutpage.scss"
+    },
+    {
       "Id": "C:\\Users\\DELL\\Desktop\\RampagaBackend\\Rampage\\wwwroot\\assets\\css\\basketsepet.css",
       "PackagePath": "staticwebassets\\assets\\css\\basketsepet.css"
     },

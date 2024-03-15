@@ -23,6 +23,13 @@ public class BlogVM
 }
 
 
+public class BlogDetailVM
+{
+    public Blog Blog { get; set; } = null!;
+    public List<BlogCategory> BlogCategories { get; set; } = new();
+}
+
+
 
 
 public class ShopVM
