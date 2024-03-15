@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.Web.CodeGeneration;
 using Rampage.Areas.Admin.Utilities.Helpers;
 using Rampage.Areas.Admin.Utilities.Services;
 using Rampage.Database;
@@ -10,6 +10,8 @@ using Rampage.ViewModels;
 namespace Rampage.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "Admin")]
+
 public class CategoryController : Controller
 {
     private readonly AppDbContext _context;

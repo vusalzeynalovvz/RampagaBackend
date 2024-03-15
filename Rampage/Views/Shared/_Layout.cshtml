@@ -63,20 +63,20 @@
                 @{
                     if (User.Identity?.IsAuthenticated ?? false)
                     {
-                        <li style="cursor: pointer;">
-                            <a asp-action="UserInfo" asp-controller="Account">
-                                <i class="fa-solid fa-user"></i>
-                            </a>
-                        </li>
+                                <li style="cursor: pointer;">
+                                    <a asp-action="UserInfo" asp-controller="Account">
+                                        <i class="fa-solid fa-user"></i>
+                                    </a>
+                                </li>
                     }
                     else
                     {
-                        <li style="cursor: pointer;">
-                            <a asp-action="Login" asp-controller="Account">
-                                <i class="fa-solid fa-user"></i>
-                                <span>Giris yap</span>
-                            </a>
-                        </li>
+                                <li style="cursor: pointer;">
+                                    <a asp-action="Login" asp-controller="Account">
+                                        <i class="fa-solid fa-user"></i>
+                                        <span>Giris yap</span>
+                                    </a>
+                                </li>
 
                     }
                 }
@@ -111,7 +111,7 @@
                         {
                             totalPrice += (bItem.Product.Price * bItem.Count);
                             <div class="product-item snipcss0-2-5-6">
-                                <a asp-action="RemoveBasketItem" asp-controller="Shop" asp-route-id="@bItem.Id" asp-route-returnAction="@Context.Request.Path.Value" class="delete snipcss0-3-6-7" onclick="delete_from_cart(20500);">
+                                <a asp-action="RemoveBasketItem" asp-controller="Shop" asp-route-id="@bItem.Id" data-price="@bItem.Product.Price" asp-route-returnAction="@Context.Request.Path.Value" class="delete basketRemoveBtn snipcss0-3-6-7" onclick="delete_from_cart(20500);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="11.583" height="11.583"
                                          viewBox="0 0 11.583 11.583" class="snipcss0-4-7-8">
                                         <g transform="translate(-7.783 -7.783)" class="snipcss0-5-8-9">
@@ -136,7 +136,7 @@
                                     @bItem.Product.Name
                                 </a>
                                 <div class="qty snipcss0-3-6-14">
-                                    <a asp-action="AddToBasket" asp-controller="Shop" asp-route-id="@bItem.Product.Id" asp-route-returnAction="@Context.Request.Path.Value" class="qty-plus snipcss0-4-14-15">
+                                    <a asp-action="AddToBasket" asp-controller="Shop" asp-route-id="@bItem.Product.Id" data-price="@bItem.Product.Price" asp-route-returnAction="@Context.Request.Path.Value" class="qty-plus BasketBtnPlus snipcss0-4-14-15">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
                                              viewBox="0 0 9.156 16.953" class="snipcss0-5-15-16">
                                             <path d="M126.7,8.011,118.864.192a.657.657,0,0,0-.928.931l7.375,7.354-7.375,7.354a.657.657,0,0,0,.928.93L126.7,8.942a.657.657,0,0,0,0-.93Z"
@@ -145,13 +145,13 @@
                                         </svg>
                                     </a>
                                     <div class="piece snipcss0-4-14-17">
-                                        <input type="number" step="1" name="adet" value="@bItem.Count" data-update-qty="20500" min="1"
-                                               class="snipcss0-5-17-18">
+                                        <input type="number" step="1" name="adet" value="@bItem.Count" data-update-qty="20500" min="1" max="@bItem.Product.Count"
+                                               class="snipcss0-5-17-18 basketCountInput">
                                         <span class="snipcss0-5-17-19">
                                             Adet
                                         </span>
                                     </div>
-                                    <a asp-action="Decrease" asp-controller="Shop" asp-route-id="@bItem.Product.Id" asp-route-returnAction="@Context.Request.Path.Value" class="qty-minus snipcss0-4-14-20">
+                                    <a asp-action="Decrease" asp-controller="Shop" asp-route-id="@bItem.Product.Id" data-price="@bItem.Product.Price" asp-route-returnAction="@Context.Request.Path.Value" class="qty-minus BasketBtnMinus snipcss0-4-14-20">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="9.156" height="16.953"
                                              viewBox="0 0 9.156 16.953" class="snipcss0-5-20-21">
                                             <path d="M8.963,8.942l-7.841,7.82a.657.657,0,0,1-.928-.931L7.568,8.477.193,1.122a.657.657,0,0,1,.928-.93L8.963,8.011a.657.657,0,0,1,0,.93Z"
@@ -167,9 +167,12 @@
                                 </div>
                             </div>
                         }
+
+
+
                     </div>
                     <div class="basket-bottom ">
-                        <p class="">
+                        <p class="basketTotalPriceArea" data-price="@totalPrice">
                             <b class="">
                                 Toplam:
                             </b>
@@ -191,6 +194,84 @@
                 </div>
             </div>
         </nav>
+        <script>
+
+            const totalPriceArea = document.querySelector('.basketTotalPriceArea')
+
+            const increaseButtons = document.querySelectorAll('.BasketBtnPlus');
+            increaseButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    fetch(btn.href).then(res => {
+                        if(res.ok){
+
+                            var total = parseFloat(totalPriceArea.dataset.price.replace(',', '.'))
+
+                            total += parseFloat(btn.dataset.price.replace(',', '.'));
+
+
+                            totalPriceArea.innerHTML = `<b class="">Toplam:</b>${total} TL`
+
+                            totalPriceArea.dataset.price = total;
+                        }
+                    })
+
+
+                })
+            })
+
+            const decreaseButtons=document.querySelectorAll('.BasketBtnMinus')
+            decreaseButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    fetch(btn.href).then(res => {
+                        if (res.ok) {
+
+                            var total = parseFloat(totalPriceArea.dataset.price.replace(',', '.'))
+
+                            total -= parseFloat(btn.dataset.price.replace(',', '.'));
+
+
+                            totalPriceArea.innerHTML = `<b class="">Toplam:</b>${total} TL`;
+                            totalPriceArea.dataset.price = total;
+
+                        }
+                    })
+
+
+                })
+            })
+
+
+            const basketItemInputs = document.querySelectorAll('.basketCountInput')
+            const basketRemoveBtns = document.querySelectorAll('.basketRemoveBtn')
+
+            basketRemoveBtns.forEach((btn,i) => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    fetch(btn.href).then(res => {
+                        if (res.ok) {
+
+                            var total = parseFloat(totalPriceArea.dataset.price.replace(',', '.'))
+
+                            total -= (parseFloat(btn.dataset.price.replace(',', '.')) * parseInt(basketItemInputs[i].value))
+
+
+                            totalPriceArea.innerHTML = `<b class="">Toplam:</b>${total} TL`;
+                            totalPriceArea.dataset.price = total;
+
+
+                            btn.parentElement.remove()
+                        }
+                    })
+
+                })
+            })
+
+        </script>
         <div class="shop-item-container">
             <div class="all-boxes-item">
                 <ul>
@@ -268,19 +349,19 @@
                         searchProductList.innerHTML = ""
                         data.forEach((x) => {
                             searchProductList.innerHTML += `  <a href="#" class="search-product-item">
-                                                                  <div class="search-left">
-                                                                                  <p class="search-barcod">${x.barcode}</p>
-                                                                      <p class="search-product-name">
-                                                                         ${x.name}
-                                                                      </p>
-                                                                      <div class="search-price">
-                                                                      </div>
-                                                                  </div>
-                                                                  <div class="search-product-image">
-                                                                      <img src="${x.baseImagePath}" alt="">
-                                                                  </div>
-                                                              </a>
-                                                                                `
+                                                                                                                  <div class="search-left">
+                                                                                                                                  <p class="search-barcod">${x.barcode}</p>
+                                                                                                                      <p class="search-product-name">
+                                                                                                                         ${x.name}
+                                                                                                                      </p>
+                                                                                                                      <div class="search-price">
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                                  <div class="search-product-image">
+                                                                                                                      <img src="${x.baseImagePath}" alt="">
+                                                                                                                  </div>
+                                                                                                              </a>
+                                                                                                                                `
                         })
                     })
                     .catch(error => {

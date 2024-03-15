@@ -82,7 +82,7 @@ public class ShopController : Controller
             return NotFound();
 
 
-        var existItem = await _context.BasketItems.FirstOrDefaultAsync(x => x.ProductId == id && x.AppUserId == userId && x.IsSale==false);
+        var existItem = await _context.BasketItems.FirstOrDefaultAsync(x => x.ProductId == id && x.AppUserId == userId && x.IsSale == false);
         if (existItem is not null)
         {
             if (product.Count > existItem.Count)
@@ -120,14 +120,15 @@ public class ShopController : Controller
         if (userId is null)
             return Unauthorized();
 
-        var bItem = await _context.BasketItems.FirstOrDefaultAsync(x => x.ProductId == id && x.AppUserId == userId);
+        var bItem = await _context.BasketItems.FirstOrDefaultAsync(x => x.ProductId == id && x.AppUserId == userId && x.IsSale == false);
 
         if (bItem is null)
             return NotFound();
 
-        if (bItem.Count > 1)
-            bItem.Count--;
+        if (bItem.Count <= 1)
+            return BadRequest();
 
+        bItem.Count--;
         _context.BasketItems.Update(bItem);
         await _context.SaveChangesAsync();
 

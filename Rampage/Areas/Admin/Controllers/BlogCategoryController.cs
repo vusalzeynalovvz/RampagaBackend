@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Rampage.Database;
 using Rampage.Database.DomainModels;
@@ -6,6 +7,7 @@ using Rampage.ViewModels;
 
 namespace Rampage.Areas.Admin.Controllers;
 [Area("Admin")]
+[Authorize(Roles ="Admin")]
 public class BlogCategoryController : Controller
 {
     private readonly AppDbContext _context;

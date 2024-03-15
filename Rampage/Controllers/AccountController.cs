@@ -36,7 +36,7 @@ public class AccountController : Controller
         if (user is null)
         {
             await _signInManager.SignOutAsync();
-            return BadRequest();    
+            return BadRequest();
         }
 
 
@@ -55,12 +55,12 @@ public class AccountController : Controller
 
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-        var user=await _userManager.FindByIdAsync(userId);
+        var user = await _userManager.FindByIdAsync(userId);
 
-        var result=await _userManager.ChangePasswordAsync(user, oldPassword, newPassword);
+        var result = await _userManager.ChangePasswordAsync(user, oldPassword, newPassword);
 
         if (result.Succeeded)
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
 
         return BadRequest();
 
@@ -70,12 +70,18 @@ public class AccountController : Controller
 
     public IActionResult Login()
     {
+        if (User.Identity?.IsAuthenticated ?? false)
+            return BadRequest();
         return View();
     }
 
     [Authorize]
     public async Task<IActionResult> Logout()
     {
+
+        if (!User.Identity?.IsAuthenticated ?? false)
+            return BadRequest();
+
         await _signInManager.SignOutAsync();
 
         return RedirectToAction("Login");
@@ -85,6 +91,7 @@ public class AccountController : Controller
     [HttpPost]
     public async Task<IActionResult> Login(LoginVM vm)
     {
+
         if (!ModelState.IsValid)
             return View(vm);
 
@@ -118,6 +125,8 @@ public class AccountController : Controller
 
     public IActionResult Register()
     {
+        if (User.Identity?.IsAuthenticated ?? false)
+            return BadRequest();
         return View();
     }
     [HttpPost]

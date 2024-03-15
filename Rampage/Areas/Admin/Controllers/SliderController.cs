@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Rampage.Areas.Admin.Utilities.Helpers;
 using Rampage.Areas.Admin.Utilities.Services;
@@ -8,6 +9,7 @@ using Rampage.ViewModels;
 
 namespace Rampage.Areas.Admin.Controllers;
 [Area("Admin")]
+[Authorize(Roles = "Admin")]
 public class SliderController : Controller
 {
     private readonly AppDbContext _context;
