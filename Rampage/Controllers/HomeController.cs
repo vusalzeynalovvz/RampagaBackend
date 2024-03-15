@@ -26,7 +26,7 @@ public class HomeController : Controller
             Sliders = await _context.Sliders.ToListAsync(),
             Categories = await _context.Categories.Take(4).ToListAsync(),
             SpecialCategories = await _context.Categories.Where(x => x.ParentCategoryId != null).Include(x => x.Products).OrderByDescending(x => x.Products.Count).Take(4).ToListAsync(),
-            Comments = await _context.Comments.OrderByDescending(x => x.Rating).Take(3).Include(x=>x.Product).Include(x=>x.AppUser).ToListAsync(),
+            Comments = await _context.Comments.OrderByDescending(x => x.Rating).Take(3).Include(x => x.Product).Include(x => x.AppUser).ToListAsync(),
         };
 
         return View(vm);
@@ -55,8 +55,9 @@ public class HomeController : Controller
 
     public async Task<List<Product>> Search(string search)
     {
-        
-        return new();
+        var products = await _context.Products.Where(x => x.Name.ToLower().Contains(search.ToLower().Trim())).ToListAsync();
+
+        return products;
     }
 
 }
