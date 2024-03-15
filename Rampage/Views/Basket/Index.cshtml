@@ -84,7 +84,7 @@
                         <div class="sepet-count">
                             <div class="piece">
                                 <div class="product-qty">
-                                    <a asp-action="Decrease" asp-controller="Shop" asp-route-id="@bItem.Product.Id" asp-route-returnAction="@Context.Request.Path.Value" class="qty-minus">
+                                    <a asp-action="Decrease" asp-controller="Shop" asp-route-id="@bItem.Product.Id" asp-route-returnAction="@Context.Request.Path.Value" data-price="@bItem.Product.Price" class="qty-minus BasketBtnMinus2">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25"
                                              viewBox="0 0 9.156 16.953">
                                             <path d="M8.963,8.942l-7.841,7.82a.657.657,0,0,1-.928-.931L7.568,8.477.193,1.122a.657.657,0,0,1,.928-.93L8.963,8.011a.657.657,0,0,1,0,.93Z"
@@ -92,9 +92,9 @@
                                         </svg>
                                     </a>
                                     <div class="piece-count">
-                                        <input type="number" step="1" name="adet" value="@bItem.Count" min="1" max="@bItem.Product.Count">
+                                        <input class="basketCountInput2" type="number" step="1" name="adet" value="@bItem.Count" min="1" max="@bItem.Product.Count">
                                     </div>
-                                    <a asp-action="AddToBasket" asp-controller="Shop" asp-route-id="@bItem.Product.Id" asp-route-returnAction="@Context.Request.Path.Value" class="qty-plus">
+                                    <a asp-action="AddToBasket" asp-controller="Shop" asp-route-id="@bItem.Product.Id" asp-route-returnAction="@Context.Request.Path.Value" data-price="@bItem.Product.Price" class="qty-plus BasketBtnPlus2">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25"
                                              viewBox="0 0 9.156 16.953">
                                             <path d="M126.7,8.011,118.864.192a.657.657,0,0,0-.928.931l7.375,7.354-7.375,7.354a.657.657,0,0,0,.928.93L126.7,8.942a.657.657,0,0,0,0-.93Z"
@@ -115,7 +115,7 @@
                             </div>
                         </div>
                         <div class="sepet-delete">
-                            <a asp-action="RemoveBasketItem" asp-controller="Shop" asp-route-id="@bItem.Id" asp-route-returnAction="@Context.Request.Path.Value"><i class="fas fa-trash"></i> SİL </a>
+                            <a class="basketRemoveBtn2" asp-action="RemoveBasketItem" asp-controller="Shop" asp-route-id="@bItem.Id" asp-route-returnAction="@Context.Request.Path.Value"><i class="fas fa-trash"></i> SİL </a>
                         </div>
                     </div>
                 }
@@ -145,7 +145,7 @@
                 <div class="ozetDetay">
                     <div>
                         <span>ARA TOPLAM</span>
-                        <p>@total <i class="fa-solid fa-turkish-lira-sign"></i></p>
+                        <p class="basketTotalPriceArea2" data-price="@total">@total <i class="fa-solid fa-turkish-lira-sign"></i></p>
                     </div>
                 </div>
                 <div class="couppon">
@@ -156,8 +156,100 @@
                 </div>
             </div>
         </div>
+
+
+
+
+        <script>
+
+            const totalPriceArea2 = document.querySelector('.basketTotalPriceArea2')
+            const basketItemInputs2 = document.querySelectorAll('.basketCountInput2')
+
+
+            const increaseButtons2 = document.querySelectorAll('.BasketBtnPlus2');
+            increaseButtons2.forEach((btn,i) => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    fetch(btn.href).then(res => {
+                        if (res.ok) {
+
+                            var total = parseFloat(totalPriceArea2.dataset.price.replace(',', '.'))
+
+                            total += parseFloat(btn.dataset.price.replace(',', '.'));
+
+
+                            totalPriceArea2.innerHTML = `${total} <i class="fa-solid fa-turkish-lira-sign"></i>`
+
+                            totalPriceArea2.dataset.price = total;
+                            basketItemInputs2[i].value++
+                        }
+                    })
+
+
+                })
+            })
+
+            console.log(increaseButtons);
+
+            const decreaseButtons2 = document.querySelectorAll('.BasketBtnMinus2')
+            decreaseButtons2.forEach((btn,i) => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    fetch(btn.href).then(res => {
+                        if (res.ok) {
+
+                            var total = parseFloat(totalPriceArea2.dataset.price.replace(',', '.'))
+
+                            total -= parseFloat(btn.dataset.price.replace(',', '.'));
+
+
+                            totalPriceArea2.innerHTML = `${total} <i class="fa-solid fa-turkish-lira-sign"></i>`
+                            totalPriceArea2.dataset.price = total;
+                            basketItemInputs2[i].value--
+
+
+                        }
+                    })
+
+
+                })
+            })
+
+
+            const basketRemoveBtns2 = document.querySelectorAll('.basketRemoveBtn2')
+
+            basketRemoveBtns2.forEach((btn, i) => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    fetch(btn.href).then(res => {
+                        if (res.ok) {
+
+                            var total = parseFloat(totalPriceArea2.dataset.price.replace(',', '.'))
+
+                            total -= (parseFloat(btn.dataset.price) * parseInt(basketItemInputs2[i].value))
+
+
+                            totalPriceArea2.innerHTML = `${total} <i class="fa-solid fa-turkish-lira-sign"></i>`
+                            totalPriceArea2.dataset.price = total;
+
+
+                            btn.parentElement.parentElement.remove()
+                        }
+                    })
+
+                })
+            })
+
+        </script>
     </section>
 </main>
+
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="~/assets/js/basketsepet.js"></script>
