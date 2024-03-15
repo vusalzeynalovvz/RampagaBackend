@@ -1,0 +1,116 @@
+﻿@using Microsoft.Extensions.Options
+@using Rampage.Models
+@model OrderVM
+
+@inject IOptions<StripeSettings> Stripe
+
+<!-- Header Sections End -->
+<main>
+    <section class="shopping-basket-image">
+        <div class="basket-nav">
+            <div class="step active mobile-active bar">
+                <div class="stepIcon">
+                    <a href="#">
+                        <i class="fas fa-shopping-basket" title="Alışveriş Sepeti">
+                        </i>
+                    </a>
+                </div>
+                <div class="stepTitle">
+                    <a href="#" id="shopping">
+                        Alışveriş Sepeti
+                    </a>
+                </div>
+            </div>
+            <div class="step active">
+                <div class="stepIcon">
+                    <a href="#">
+                        <i class="fas fa-shipping-fast" title="Teslimat Bilgileri">
+                        </i>
+                    </a>
+                </div>
+                <div class="stepTitle">
+                    <a href="#">
+                        Teslimat Bilgileri
+                    </a>
+                </div>
+            </div>
+            <div class="step">
+                <div class="stepIcon">
+                    <a href="#">
+                        <i class="fas fa-credit-card" title="Ödeme Bilgileri">
+                        </i>
+                    </a>
+                </div>
+                <div class="stepTitle">
+                    <a href="#">
+                        Ödeme Bilgileri
+                    </a>
+                </div>
+            </div>
+            <div class="step">
+                <div class="stepIcon">
+                    <a href="javascript:;">
+                        <i class="far fa-check-circle" title="Sipariş Sonu">
+                        </i>
+                    </a>
+                </div>
+                <div class="stepTitle">
+                    <a href="javascript:;">
+                        Sipariş Sonu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sepet-all">
+        <form method="post" onsubmit="this.form.submit()" class="sepet-left-right">
+            <div class="sepet-left-delivery">
+                <h3>Teslimat Bilgileri</h3>
+                <div class="form-delivery">
+                    <input asp-for="FullName" type="text" placeholder="Ad Soyad">
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                    <input asp-for="City" type="text" placeholder="Şehir">
+                    <span asp-validation-for="City" class="text-danger"></span>
+                    <input asp-for="Address" type="text" placeholder="Adress">
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                    <input asp-for="PhoneNumber" type="number" placeholder="Telefon numarası">
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="sepet-right">
+                <div class="ozetTitle">
+                    <h4>SİPARİŞ ÖZETİ</h4>
+                </div>
+                <div class="ozetDetay">
+                    <div>
+                        <span>ARA TOPLAM</span>
+                        <p>@ViewBag.Total <i class="fa-solid fa-turkish-lira-sign"></i></p>
+                    </div>
+                    
+                    <div>
+                        <span>KARGO</span>
+                        <p>50,00 <i class="fa-solid fa-turkish-lira-sign"></i></p>
+                    </div>
+                    <div>
+                        <span>TUTAR</span>
+                        <p>@(ViewBag.Total + 50) <i class="fa-solid fa-turkish-lira-sign"></i></p>
+                    </div>
+                </div>
+                <div class="couppon">
+                    <script src="//checkout.stripe.com/v2/checkout.js"
+                            class="stripe-button"
+                            data-key="@Stripe.Value.Publishablekey"
+                            data-amount="@((ViewBag.Total+50)*100)"
+                            data-name="Malefashion"
+                            data-locale="en"
+                            data-discription="Sample charge"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-zip-code="true">
+                    </script>
+                </div>
+            </div>
+        </form>
+    </section>
+</main>
+<!-- Footer Start -->

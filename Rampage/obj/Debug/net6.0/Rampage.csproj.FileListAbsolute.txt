@@ -530,3 +530,4 @@ C:\Users\DELL\Desktop\RampagaBackend\Rampage\obj\Debug\net6.0\refint\Rampage.dll
 C:\Users\DELL\Desktop\RampagaBackend\Rampage\obj\Debug\net6.0\Rampage.pdb
 C:\Users\DELL\Desktop\RampagaBackend\Rampage\obj\Debug\net6.0\Rampage.genruntimeconfig.cache
 C:\Users\DELL\Desktop\RampagaBackend\Rampage\obj\Debug\net6.0\ref\Rampage.dll
+C:\Users\DELL\Desktop\RampagaBackend\Rampage\bin\Debug\net6.0\Stripe.net.dll

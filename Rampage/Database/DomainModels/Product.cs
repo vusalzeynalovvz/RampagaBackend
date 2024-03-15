@@ -35,8 +35,13 @@ public class Product : BaseEntity, IEntity
 
     public Color Color { get; set; } = null!;
     [Required(ErrorMessage = "Renk gereklidir.")]
-    public int ColorId { get; set; } 
+    public int ColorId { get; set; }
+
+    public int Rating { get; set; } = 5;
+    public int SalesCount { get; set; } = 0;
 
     public ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
     public ICollection<ProductInfo> ProductInfos { get; set; } = new List<ProductInfo>();
+    public ICollection<Comment> Comments { get; set; } = new List<Comment>();
+
 }

@@ -9,6 +9,8 @@ public class HomeVM
     public List<Product> NewProducts { get; set; } = new();
     public List<Category> Categories { get; set; } = new();
     public List<Category> SpecialCategories { get; set; } = new();
+    public List<Slider> Sliders { get; set; } = new();
+    public List<Comment> Comments  { get; set; } = new();
 
 }
 

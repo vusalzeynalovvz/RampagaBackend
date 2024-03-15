@@ -1,0 +1,47 @@
+﻿@model List<Order>
+
+@{
+    int Count = 1;
+}
+<!-- Table Start -->
+<div class="container-fluid pt-4 px-4">
+
+    <div class="col-12">
+        <div class="bg-secondary rounded h-100 p-4">
+            <h6 class="mb-4">Sifarişler</h6>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Adı</th>
+                            <th scope="col">Tarih</th>
+                            <th scope="col">Değer</th>
+                            <th scope="col">Eylemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Order order in Model)
+                        {
+                            <tr>
+                                <th scope="row">@(Count++)</th>
+                                <td>@order.FullName</td>
+                                <td>@order.CreatedTime.ToString().Substring(0,10)</td>
+                                <td>@order.TotalPrice</td>
+                                <td>
+                                    <a asp-action="Detail" asp-route-id="@order.Id" class="btn btn-info">Info</a>
+                                </td>
+                            </tr>
+
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<!-- Table End -->
+<!-- Content End -->

@@ -5,6 +5,67 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.search-product-list-all {
+  .search-product-list {
+    margin: 65px 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    overflow-y: auto;
+    max-height: 487px;
+    padding-right: 15px;
+    .search-product-item {
+      display: flex;
+      align-items: center;
+      height: 190px;
+      width: 360px;
+      background: rgb(36 36 36 / 20%);
+      justify-content: space-between;
+      padding: 20px 25px;
+      transition: 0.4s;
+      margin-top: 40px;
+    }
+    .search-left {
+      display: flex;
+      flex-direction: column;
+      width: 120px;
+      justify-content: space-between;
+      height: 100%;
+      .search-barcod {
+        font-weight: bold;
+        font-size: 15px;
+        color: #fff;
+        margin: 0;
+      }
+      .search-price {
+        font-weight: bold;
+        font-size: 15px;
+        color: #fff;
+        margin: 0;
+      }
+      .search-product-name {
+        font-weight: normal;
+        font-size: 15px;
+        color: #fff;
+        margin: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        width: 115px;
+      }
+    }
+    .search-product-image {
+      width: 140px;
+      height: 140px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
 a {
   text-decoration: none;
 }

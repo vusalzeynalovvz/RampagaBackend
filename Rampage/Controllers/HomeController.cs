@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Rampage.Database;
+using Rampage.Database.DomainModels;
 using Rampage.ViewModels;
 
 namespace Rampage.Controllers;
@@ -20,11 +21,12 @@ public class HomeController : Controller
         HomeVM vm = new()
         {
             NewProducts = await _context.Products.OrderByDescending(x => x.Id).Take(2).ToListAsync(),
-            PopularProducts = await _context.Products.OrderBy(x => x.Price).Take(2).ToListAsync(),
+            PopularProducts = await _context.Products.OrderBy(x => x.SalesCount).Take(2).ToListAsync(),
             SpecialProducts = await _context.Products.OrderByDescending(x => x.Price).Take(2).ToListAsync(),
-
+            Sliders = await _context.Sliders.ToListAsync(),
             Categories = await _context.Categories.Take(4).ToListAsync(),
-            SpecialCategories = await _context.Categories.Where(x => x.ParentCategoryId != null).Include(x => x.Products).OrderByDescending(x => x.Products.Count).Take(4).ToListAsync()
+            SpecialCategories = await _context.Categories.Where(x => x.ParentCategoryId != null).Include(x => x.Products).OrderByDescending(x => x.Products.Count).Take(4).ToListAsync(),
+            Comments = await _context.Comments.OrderByDescending(x => x.Rating).Take(3).Include(x=>x.Product).Include(x=>x.AppUser).ToListAsync(),
         };
 
         return View(vm);
@@ -48,6 +50,13 @@ public class HomeController : Controller
 
         return Redirect(returnAction);
 
+    }
+
+
+    public async Task<List<Product>> Search(string search)
+    {
+        
+        return new();
     }
 
 }

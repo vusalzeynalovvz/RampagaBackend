@@ -1,4 +1,5 @@
-﻿<!-- Main Start -->
+﻿@model Dictionary<string,string>
+<!-- Main Start -->
 <main>
     <section class="all-map">
         <div id="map"></div>
@@ -8,15 +9,15 @@
         <div class="info">
             <div class="info-item">
                 <span>Adres</span>
-                <a href="#">Arnavutköy/ İstanbul</a>
+                <a href="#">@Model["contactAddress"]</a>
             </div>
             <div class="info-item">
                 <span>Telefon</span>
-                <a href="#">4447899</a>
+                <a href="#">@Model["contactPhone"]</a>
             </div>
             <div class="info-item">
                 <span>E-posta</span>
-                <a href="#">info@rampage.com.trl</a>
+                <a href="#">@Model["contactEmail"]</a>
             </div>
         </div>
     </section>
@@ -33,25 +34,16 @@
 
                 </div>
             </div>
-            <div class="contact-right">
+            <form method="post" asp-action="Contact" class="contact-right">
                 <div class="inputs">
                     <div class="form-item">
-                        <input type="text" placeholder="Adınız Soyadınız">
+                        <input type="text" name="fullname" placeholder="Adınız Soyadınız">
                     </div>
                     <div class="form-item">
-                        <input type="email" placeholder="E-posta Adresiniz">
+                        <input type="email" name="email" placeholder="E-posta Adresiniz">
                     </div>
                     <div class="form-item">
-                        <textarea class="textarea" name="mesaj" id="mesaj" placeholder="Mesajınız"></textarea>
-                    </div>
-                </div>
-                <div class="security-all">
-                    <div class="security-image">
-                        <img src="~/assets/image/securimage_show.png" alt="">
-                        <i class="fa-solid fa-arrows-rotate"></i>
-                    </div>
-                    <div class="security-code">
-                        <input type="text" placeholder="GÜVENLİK KODU">
+                        <textarea class="textarea" name="message" id="mesaj" placeholder="Mesajınız"></textarea>
                     </div>
                 </div>
                 <div class="gizlilik">
@@ -63,9 +55,9 @@
                     </p>
                 </div>
                 <div class="send-message-contact">
-                    <button>Gönder</button>
+                    <button type="submit">Gönder</button>
                 </div>
-            </div>
+            </form>
 
         </div>
     </section>

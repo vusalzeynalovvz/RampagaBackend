@@ -19,7 +19,10 @@ public class AppDbContext : IdentityDbContext<AppUser>
     public DbSet<Color> Colors { get; set; } = null!;
     public DbSet<Setting> Settings { get; set; } = null!;
     public DbSet<BlogCategory> BlogCategories { get; set; } = null!;
-    public DbSet<Blog> Blogs  { get; set; } = null!;
-    public DbSet<BasketItem> BasketItems  { get; set; } = null!;
-    public DbSet<Subscribe> Subscribes   { get; set; } = null!;
+    public DbSet<Blog> Blogs { get; set; } = null!;
+    public DbSet<BasketItem> BasketItems { get; set; } = null!;
+    public DbSet<Subscribe> Subscribes { get; set; } = null!;
+    public DbSet<Slider> Sliders { get; set; } = null!;
+    public DbSet<Order> Orders { get; set; } = null!;
+    public DbSet<Comment> Comments { get; set; } = null!;
 }

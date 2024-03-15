@@ -4,7 +4,9 @@ using Rampage.Areas.Admin.Utilities.Helpers;
 using Rampage.Areas.Admin.Utilities.Services;
 using Rampage.Database;
 using Rampage.Database.DomainModels;
+using Rampage.Models;
 using Rampage.Services;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,8 @@ builder.Services.AddScoped<CloudinaryService>();
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 builder.Services.AddScoped<MailKitHelper>();
 builder.Services.AddScoped<LayoutService>();
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 {
@@ -32,6 +36,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 
 }).AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
 
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:Secretkey"];
 
 var app = builder.Build();
 

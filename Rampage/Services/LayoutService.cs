@@ -36,7 +36,7 @@ public class LayoutService
         if (userId is null)
             return new();
 
-        var basketItems = (await _context.BasketItems.Where(x => x.AppUserId == userId).Include(x => x.Product).ToListAsync());
+        var basketItems = (await _context.BasketItems.Where(x => x.AppUserId == userId && x.IsSale == false).Include(x => x.Product).ToListAsync());
 
         return basketItems;
 

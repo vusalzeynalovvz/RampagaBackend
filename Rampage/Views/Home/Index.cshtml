@@ -4,48 +4,29 @@
     <section>
         <div class="swiper mySwiper2">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img class="slider-image-index" src="~/assets/image/download.jpg" alt="">
-                    <div class="slider-text">
-                        <span>BLINK</span>
-                        <h3>BLINK YAKINDA STOKLARDA!</h3>
-                        <p>
-                            Rampage BLINK mouse 4 Farklı renk seçenekleri ve tarzınıza uygun ekstra söküp takılabilen
-                            avuç içi desteği kutu içeriğinde sunuluyor.
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <img class="slider-image-index" src="~/assets/image/sliderphoto.jpg" alt="">
-                    <div class="slider-text">
-                        <span>FORCE V995</span>
-                        <h3>GERÇEK SÜRÜŞ DENEYİMİ</h3>
-                        <p>
-                            Rampage FORCE V995, her türlü yarış oyunu için tasarlanmış dinamik bir direksiyon
-                            setidir. Kusursuz sürüş deneyimi için tasarlanan FORCE V995
-                            gerçek bir araba hissi ile hızlanmanızı, fren yapmanızı ve vites değiştirmenizi sağlar.
-                            PS4/PC/XBOX ONE/Xbox Series S/X için uygundur.
-                        </p>
-                        <div class="slider-btn">
-                            <a href="#">Alışverişe Başla</a>
-                            <i class="fa-solid fa-chevron-right"></i>
+                @foreach (var slider in Model.Sliders)
+                {
+                    <div class="swiper-slide">
+                        <img class="slider-image-index" src="@slider.ImagePath" alt="">
+                        <div class="slider-text">
+                            <span>@slider.Name</span>
+                            <h3>@slider.Subject</h3>
+                            <p>
+                                @slider.Title
+                            </p>
+                            @{
+                                if (slider.Button is not null)
+                                {
+
+                                    <div class="slider-btn">
+                                        <a asp-action="Index" asp-controller="Shop">@slider.Button</a>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                }
+                            }
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <img class="slider-image-index" src="~/assets/image/download.png" alt="">
-                    <div class="slider-text">
-                        <span>CRACK H11</span>
-                        <h3>OYUNLARDA ÖZGÜRLÜĞÜN TADINI ÇIKAR</h3>
-                        <p>
-                            Oyunlarda performansınızı üst seviyeye taşımanız için kablosuz ve ultra hafif tasarlandı.
-                        </p>
-                        <div class="slider-btn">
-                            <a href="#">Keşfet </a>
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </section>
@@ -290,7 +271,7 @@
         @for (int i = 0; i < Model.SpecialCategories.Count; i++)
         {
             <div class="category-cards@(i+1)">
-                @foreach (var product in Model.SpecialCategories[i].Products)   
+                @foreach (var product in Model.SpecialCategories[i].Products)
                 {
                     <div class="category-card">
                         <h2>@product.Name</h2>
@@ -317,151 +298,34 @@
         <div class="user-comment-boxs">
             <div class="swiper user-comment-slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="user-comment-box">
-                            <span>
-                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
-                                Gaming Oyuncu Kasası
-                            </span>
-                            <div class="user-comment-image">
-                                <img src="~/assets/image/usercommentimage1.png" alt="Kasa">
-                            </div>
-                            <div class="user-comment-text">
-                                <div class="user-name-date">
-                                    <div class="user-name">SERTAÇ Güngör</div>
-                                    <div class="user-date">21/11/2023</div>
+                    @foreach (var comment in Model.Comments)
+                    {
+                        <div style="max-width:430px" class="swiper-slide">
+                            <div class="user-comment-box">
+                                <span>
+                                    @comment.Product.Name
+                                </span>
+                                <div class="user-comment-image">
+                                    <img src="@comment.Product.BaseImagePath" alt="Kasa">
                                 </div>
-                                <div class="user-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
+                                <div class="user-comment-text">
+                                    <div class="user-name-date">
+                                        <div class="user-name">@comment.AppUser.FullName</div>
+                                        <div class="user-date">@comment.CreatedTime.ToString().Substring(0, 10)</div>
+                                    </div>
+                                    <div class="user-stars">
+                                        @for (int i = 0; i < comment.Rating; i++)
+                                        {
+                                            <i class="fa-solid fa-star"></i>
+                                        }
+                                    </div>
+                                    <p>
+                                        @comment.Title
+                                    </p>
                                 </div>
-                                <p>
-                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
-                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
-                                    serin.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="user-comment-box">
-                            <span>
-                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
-                                Gaming Oyuncu Kasası
-                            </span>
-                            <div class="user-comment-image">
-                                <img src="~/assets/image/usermouse.png" alt="Kasa">
-                            </div>
-                            <div class="user-comment-text">
-                                <div class="user-name-date">
-                                    <div class="user-name">SERTAÇ Güngör</div>
-                                    <div class="user-date">21/11/2023</div>
-                                </div>
-                                <div class="user-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>
-                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
-                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
-                                    serin.
-                                </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="user-comment-box">
-                            <span>
-                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
-                                Gaming Oyuncu Kasası
-                            </span>
-                            <div class="user-comment-image">
-                                <img src="~/assets/image/userdireksiyon.png" alt="Kasa">
-                            </div>
-                            <div class="user-comment-text">
-                                <div class="user-name-date">
-                                    <div class="user-name">SERTAÇ Güngör</div>
-                                    <div class="user-date">21/11/2023</div>
-                                </div>
-                                <div class="user-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>
-                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
-                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
-                                    serin.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="user-comment-box">
-                            <span>
-                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
-                                Gaming Oyuncu Kasası
-                            </span>
-                            <div class="user-comment-image">
-                                <img src="~/assets/image/usercommentimage1.png" alt="Kasa">
-                            </div>
-                            <div class="user-comment-text">
-                                <div class="user-name-date">
-                                    <div class="user-name">SERTAÇ Güngör</div>
-                                    <div class="user-date">21/11/2023</div>
-                                </div>
-                                <div class="user-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>
-                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
-                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
-                                    serin.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="user-comment-box">
-                            <span>
-                                Rampage PLATINO Mesh Temperli Camlı 600W 80+ BRONZE 4*12cm Rainbow Fanlı ATX Mid-T
-                                Gaming Oyuncu Kasası
-                            </span>
-                            <div class="user-comment-image">
-                                <img src="~/assets/image/usercommentimage1.png" alt="Kasa">
-                            </div>
-                            <div class="user-comment-text">
-                                <div class="user-name-date">
-                                    <div class="user-name">SERTAÇ Güngör</div>
-                                    <div class="user-date">21/11/2023</div>
-                                </div>
-                                <div class="user-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>
-                                    Ben kullanmaktayım gayet güzel fakat RGB ışıkları kapatmanın bir yolu yok Ofiste
-                                    kullandığım için sadece bu konuda sıkıntı yaşadım Onun haricinde kasanın içi çok
-                                    serin.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>

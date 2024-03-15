@@ -44,39 +44,20 @@
                     <div class="mid-item">
                         <span>Değerlendirme</span>
                         <div class="total-stars">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                 viewBox="0 0 23.378 22.558">
-                                <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                      transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                      stroke-miterlimit="10" stroke-width="1"></path>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                 viewBox="0 0 23.378 22.558">
-                                <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                      transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                      stroke-miterlimit="10" stroke-width="1"></path>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                 viewBox="0 0 23.378 22.558">
-                                <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                      transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                      stroke-miterlimit="10" stroke-width="1"></path>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                 viewBox="0 0 23.378 22.558">
-                                <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                      transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                      stroke-miterlimit="10" stroke-width="1"></path>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                 viewBox="0 0 23.378 22.558">
-                                <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                      transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                      stroke-miterlimit="10" stroke-width="1"></path>
-                            </svg>
-                            <span>4</span>
+                            @for (int i = 0; i < Model.Rating; i++)
+                            {
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
+                                     viewBox="0 0 23.378 22.558">
+                                    <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
+                                          transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
+                                          stroke-miterlimit="10" stroke-width="1"></path>
+                                </svg>
+                            }
+                           
+                            <span>@Model.Rating</span>
                         </div>
-                        <span class="comment-count">3</span>
+                        <span class="comment-count">@Model.Comments.Count</span>
                     </div>
                     <div class="mid-item2">
                         <span>Ürün Kodu</span>
@@ -90,7 +71,7 @@
                 <div class="detail-price">
                     <span>@Model.Price TL</span>
                 </div>
-                <div class="piece">
+                <form asp-action="AddToBasket" asp-route-id="@Model.Id" asp-route-returnAction="@Context.Request.Path.Value" class="piece">
                     <div class="product-qty">
                         <div class="qty-minus">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25"
@@ -100,7 +81,7 @@
                             </svg>
                         </div>
                         <div class="piece-count">
-                            <input type="number" step="1" name="adet" value="1" min="1" max="7">
+                            <input type="number" class="basketCount" step="1" name="count" value="1" min="1" max="7">
                         </div>
                         <div class="qty-plus">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25"
@@ -110,11 +91,34 @@
                             </svg>
                         </div>
                     </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            var minusButton = document.querySelector('.qty-minus');
+                            var plusButton = document.querySelector('.qty-plus');
+                            var countInput = document.querySelector('input[name="count"]');
+
+                            minusButton.addEventListener("click", function () {
+                                var currentValue = parseInt(countInput.value);
+                                if (currentValue > 1) {
+                                    countInput.value = currentValue - 1;
+                                }
+                            });
+
+                            plusButton.addEventListener("click", function () {
+                                var currentValue = parseInt(countInput.value);
+                                var maxValue = parseInt(countInput.getAttribute("max"));
+                                if (currentValue < maxValue || !maxValue) {
+                                    countInput.value = currentValue + 1;
+                                }
+                            });
+                        });
+                    </script>
+
                     <div class="add-product">
-                        <a href="#">Sepete Ekle</a>
+                        <button type="submit">Sepete Ekle</button>
                         <i class="fa-solid fa-plus"></i>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -142,215 +146,114 @@
             </div>
             <div class="tab-content3">
                 <div class="comment-left-right">
-                    <div class="comment-left">
+                    <form method="post" asp-action="PostComment" asp-route-productId="@Model.Id" class="comment-left">
                         <span>Ürünü Değerlendirin</span>
-                        <div class="comment-stars">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                 viewBox="0 0 23.378 22.558">
-                                <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                      transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                      stroke-miterlimit="10" stroke-width="1"></path>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                 viewBox="0 0 23.378 22.558">
-                                <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                      transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                      stroke-miterlimit="10" stroke-width="1"></path>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                 viewBox="0 0 23.378 22.558">
-                                <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                      transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                      stroke-miterlimit="10" stroke-width="1"></path>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                 viewBox="0 0 23.378 22.558">
-                                <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                      transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                      stroke-miterlimit="10" stroke-width="1"></path>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                 viewBox="0 0 23.378 22.558">
-                                <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                      transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                      stroke-miterlimit="10" stroke-width="1"></path>
-                            </svg>
+                        <style>
+
+                            .rating {
+                                margin-top: 40px;
+                                border: none;
+                                float: left;
+                            }
+
+                                .rating > label {
+                                    color: #90A0A3;
+                                    float: right;
+                                }
+
+                                    .rating > label:before {
+                                        margin: 5px;
+                                        font-size: 2em;
+                                        font-family: FontAwesome;
+                                        content: "\f005";
+                                        display: inline-block;
+                                    }
+
+                                .rating > input {
+                                    display: none;
+                                }
+
+                                    .rating > input:checked ~ label,
+                                    .rating:not(:checked) > label:hover,
+                                    .rating:not(:checked) > label:hover ~ label {
+                                        color: red;
+                                    }
+
+                                        .rating > input:checked + label:hover,
+                                        .rating > input:checked ~ label:hover,
+                                        .rating > label:hover ~ input:checked ~ label,
+                                        .rating > input:checked ~ label:hover ~ label {
+                                            color: orangered;
+                                        }
+                        </style>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" />
+                            <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+                            <input type="radio" id="star4" name="rating" value="4" />
+                            <label class="star" for="star4" title="Great" aria-hidden="true"></label>
+                            <input type="radio" id="star3" name="rating" value="3" />
+                            <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+                            <input type="radio" id="star2" name="rating" value="2" />
+                            <label class="star" for="star2" title="Good" aria-hidden="true"></label>
+                            <input type="radio" id="star1" name="rating" value="1" />
+                            <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
                         </div>
-                        <textarea name="comment" cols="30" rows="10" placeholder="Yorumunuz"></textarea>
+                        <textarea name="comment" cols="30" rows="10" placeholder="Yorumunuz" name="comment"></textarea>
                         <button type="submit">Paylaş</button>
-                    </div>
+                    </form>
                     <div class="comment-right">
                         <div class="user-comments-stars">
                             <div class="user-total-stars">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                     viewBox="0 0 23.378 22.558">
-                                    <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                          transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                          stroke-miterlimit="10" stroke-width="1"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                     viewBox="0 0 23.378 22.558">
-                                    <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                          transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                          stroke-miterlimit="10" stroke-width="1"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                     viewBox="0 0 23.378 22.558">
-                                    <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                          transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                          stroke-miterlimit="10" stroke-width="1"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                     viewBox="0 0 23.378 22.558">
-                                    <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                          transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                          stroke-miterlimit="10" stroke-width="1"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
-                                     viewBox="0 0 23.378 22.558">
-                                    <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                          transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                          stroke-miterlimit="10" stroke-width="1"></path>
-                                </svg>
-                                <span>4</span>
+                                @for (int i = 0; i < Model.Rating; i++)
+                                {
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23.378" height="22.558"
+                                         viewBox="0 0 23.378 22.558">
+                                        <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
+                                              transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
+                                              stroke-miterlimit="10" stroke-width="1"></path>
+                                    </svg>
+
+                                }
+
+
+                                <span>@Model.Rating</span>
                             </div>
                             <span class="user-comment-count">3</span>
                         </div>
                         <span>Ürün Genel Değerlendirmesi</span>
-                        <p>Bu ürün için <strong>3</strong> yorum bulundu.</p>
+                        <p>Bu ürün için <strong>@Model.Comments.Count</strong> yorum bulundu.</p>
                         <div class="comment-sections">
-                            <div class="comment-item">
-                                <div class="user-name">OK</div>
-                                <div class="comment-exp">
-                                    <div class="top">
-                                        <span class="name">osman kalender </span>
-                                        <span class="date">01/11/2023 </span>
-                                    </div>
-                                    <div class="mid">
-                                        <p>sipariş verdim bakalım marka güvenilir tavsiye ederim</p>
-                                    </div>
-                                    <div class="bottom-stars">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
+                            @foreach (var comment in Model.Comments)
+                            {
+                                <div class="comment-item">
+                                    <div class="user-name">@comment.AppUser.FullName[0]</div>
+                                    <div class="comment-exp">
+                                        <div class="top">
+                                            <span class="name">@comment.AppUser.FullName</span>
+                                            <span class="date">@comment.CreatedTime.ToString().Substring(0, 10) </span>
+                                        </div>
+                                        <div class="mid">
+                                            <p>@comment.Title</p>
+                                        </div>
+                                        <div class="bottom-stars">
+
+                                            @for (int i = 0; i < comment.Rating; i++)
+                                            {
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
+                                                     viewBox="0 0 23.378 22.558">
+                                                    <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
+                                                          transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
+                                                          stroke-miterlimit="10" stroke-width="1"></path>
+                                                </svg>
+                                            }
+
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="comment-item">
-                                <div class="user-name">OK</div>
-                                <div class="comment-exp">
-                                    <div class="top">
-                                        <span class="name">Bünyamin Çoban </span>
-                                        <span class="date">06/11/2023 </span>
-                                    </div>
-                                    <div class="mid">
-                                        <p>sipariş verdim bakalım marka güvenilir tavsiye ederim</p>
-                                    </div>
-                                    <div class="bottom-stars">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="comment-item">
-                                <div class="user-name">OK</div>
-                                <div class="comment-exp">
-                                    <div class="top">
-                                        <span class="name">osman kalender </span>
-                                        <span class="date">01/11/2023 </span>
-                                    </div>
-                                    <div class="mid">
-                                        <p>sipariş verdim bakalım marka güvenilir tavsiye ederim</p>
-                                    </div>
-                                    <div class="bottom-stars">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                                             viewBox="0 0 23.378 22.558">
-                                            <path d="M12.056,2.7a1,1,0,0,1,1.888,0l2.078,5.945a1,1,0,0,0,.918.67l6.256.162a1,1,0,0,1,.587,1.79L18.8,15.129a1,1,0,0,0-.347,1.072l1.784,6.074a1,1,0,0,1-1.531,1.1l-5.133-3.571a1,1,0,0,0-1.142,0L7.3,23.378a1,1,0,0,1-1.531-1.1L7.549,16.2A1,1,0,0,0,7.2,15.129L2.217,11.267A1,1,0,0,1,2.8,9.477L9.06,9.315a1,1,0,0,0,.918-.67Z"
-                                                  transform="translate(-1.311 -1.53)" fill="none" stroke="#000"
-                                                  stroke-miterlimit="10" stroke-width="1"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
+                            }
+
                         </div>
                     </div>
                 </div>
@@ -543,5 +446,5 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="~/assets/js/shopdetail.js"></script>r
+<script src="~/assets/js/shopdetail.js"></script>
 

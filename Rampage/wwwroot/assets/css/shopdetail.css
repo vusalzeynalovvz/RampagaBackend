@@ -923,10 +923,13 @@ main .shop-detail-area .product-detail-text-all .product-detail-text .piece .add
   gap: 15px;
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
-main .shop-detail-area .product-detail-text-all .product-detail-text .piece .add-product a {
+main .shop-detail-area .product-detail-text-all .product-detail-text .piece .add-product button {
   color: #f8f9fa;
   font-size: 17px;
   font-weight: bold;
+  border: none;
+  outline: none;
+  background: none;
 }
 main .shop-detail-area .product-detail-text-all .product-detail-text .piece .add-product i {
   font-size: 20px;
@@ -936,7 +939,7 @@ main .shop-detail-area .product-detail-text-all .product-detail-text .piece .add
   background-color: #f8f9fa;
   cursor: pointer;
 }
-main .shop-detail-area .product-detail-text-all .product-detail-text .piece .add-product:hover a,
+main .shop-detail-area .product-detail-text-all .product-detail-text .piece .add-product:hover button,
 main .shop-detail-area .product-detail-text-all .product-detail-text .piece .add-product:hover i {
   color: #e1251b;
 }
@@ -1184,7 +1187,7 @@ main .tab-links .tabs-contents .tab-content3 .comment-left-right .comment-right 
   position: relative;
 }
 main .tab-links .tabs-contents .tab-content3 .comment-left-right .comment-right .user-comments-stars .user-total-stars svg:nth-last-of-type(1) path {
-  fill: #646568;
+  fill: #e1251b;
   stroke: none;
 }
 main .tab-links .tabs-contents .tab-content3 .comment-left-right .comment-right .user-comments-stars .user-total-stars svg:not(:nth-last-of-type(1)) path {

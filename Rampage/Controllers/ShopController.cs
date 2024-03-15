@@ -64,13 +64,13 @@ public class ShopController : Controller
 
     public async Task<IActionResult> Detail(int id)
     {
-        var product = await _context.Products.Include(x => x.ProductInfos).Include(x => x.ProductImages).Include(x => x.Category).ThenInclude(x => x.ParentCategory).FirstOrDefaultAsync(x => x.Id == id);
+        var product = await _context.Products.Include(x => x.ProductInfos).Include(x => x.ProductImages).Include(x => x.Comments).ThenInclude(x => x.AppUser).Include(x => x.Category).ThenInclude(x => x.ParentCategory).FirstOrDefaultAsync(x => x.Id == id);
         if (product is null)
             return NotFound();
         return View(product);
     }
     [Authorize]
-    public async Task<IActionResult> AddToBasket(int id, string? returnAction)
+    public async Task<IActionResult> AddToBasket(int id, int? count, string? returnAction)
     {
         var userId = _contextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier) ?? null;
 
@@ -82,11 +82,16 @@ public class ShopController : Controller
             return NotFound();
 
 
-        var existItem = await _context.BasketItems.FirstOrDefaultAsync(x => x.ProductId == id && x.AppUserId == userId);
+        var existItem = await _context.BasketItems.FirstOrDefaultAsync(x => x.ProductId == id && x.AppUserId == userId && x.IsSale==false);
         if (existItem is not null)
         {
             if (product.Count > existItem.Count)
-                existItem.Count++;
+            {
+                if (count is null)
+                    existItem.Count++;
+                else
+                    existItem.Count += (int)count;
+            }
             _context.BasketItems.Update(existItem);
             await _context.SaveChangesAsync();
         }
@@ -94,6 +99,8 @@ public class ShopController : Controller
         {
             BasketItem item = new() { AppUserId = userId, ProductId = id, Count = 1 };
 
+            if (count is not null)
+                item.Count = (int)count;
             await _context.BasketItems.AddAsync(item);
             await _context.SaveChangesAsync();
         }
@@ -169,6 +176,53 @@ public class ShopController : Controller
         await _context.SaveChangesAsync();
 
         return RedirectToAction("Index", "Basket");
+    }
+
+    [Authorize]
+    public async Task<IActionResult> PostComment(int productId, int rating, string comment)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (userId is null)
+            return BadRequest();
+
+        var product = await _context.Products.Include(x => x.Comments).FirstOrDefaultAsync(x => x.Id == productId);
+
+        if (product is null)
+            return NotFound();
+
+        Comment cm = new()
+        {
+            AppUserId = userId,
+            ProductId = productId,
+            Rating = rating,
+            Title = comment,
+            CreatedTime = DateTime.Now,
+
+        };
+
+
+
+        product.Comments.Add(cm);
+
+        decimal total = 0;
+
+        foreach (var item in product.Comments)
+        {
+            total += item.Rating;
+        }
+
+
+        total = Math.Ceiling(total / product.Comments.Count);
+
+
+        product.Rating = (int)total;
+
+        _context.Products.Update(product);
+
+        await _context.Comments.AddAsync(cm);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("Detail", new { id = productId });
     }
 }
 

@@ -1,0 +1,84 @@
+﻿@model Order
+@{
+
+    int Count = 1;
+}
+
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+
+        <div class="col-sm-12 col-xl-12">
+            <div class="card">
+                <div style="background-color:red;color:white" class="card-header">
+                    @Model.FullName
+                </div>
+                <div style="background-color:black" class="card-body">
+                    <br />
+                    <br />
+                    <br />
+                    Şehir:@Model.City
+                    <br />
+                    Adres:@Model.Address
+                    <br />
+
+                    Telefon Numarası:@Model.PhoneNumber
+                    <br />
+
+                    Email:@Model.AppUser.Email
+                    <br />
+
+                    Tarih:@Model.CreatedTime
+
+
+                    @{
+                        if (Model.BasketItems.Count > 0)
+                        {
+
+                            <h3>
+                                Ürünler:
+                            </h3>
+                            <br />
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Resim</th>
+                                        <th scope="col">Adı</th>
+                                        <th scope="col">Değer</th>
+                                        <th scope="col">Say</th>
+                                        <th scope="col">Toplam</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (BasketItem item in Model.BasketItems)
+                                    {
+                                        <tr>
+                                            <th scope="row">@(Count++)</th>
+                                            <td> <img style="width:50px;height:50px;border-radius:100%" src="@item.Product.BaseImagePath" />  </td>
+                                            <td>@item.Product.Name</td>
+                                            <td>@item.StaticPrice</td>
+                                            <td>@item.Count</td>
+                                            <td>@(item.Count * item.StaticPrice)</td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        }
+                    }
+
+
+
+
+
+
+
+                    <a asp-action="Index" class="btn btn-primary">Geri</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

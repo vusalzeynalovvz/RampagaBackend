@@ -12,10 +12,14 @@ public class ProductController : Controller
 {
     private readonly AppDbContext _context;
     private readonly CloudinaryService _cloudinaryService;
-    public ProductController(AppDbContext context, CloudinaryService cloudinaryService)
+    private readonly MailKitHelper _mailKitHelper;
+
+    private string messageBody = "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Yeni Ürün Duyurusu</title>\r\n    <style>\r\n        body {\r\n            font-family: Arial, sans-serif;\r\n            background-color: #f7f7f7;\r\n            padding: 20px;\r\n        }\r\n        .container {\r\n            max-width: 600px;\r\n            margin: 0 auto;\r\n            background-color: #fff;\r\n            padding: 30px;\r\n            border-radius: 5px;\r\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n        }\r\n        h1 {\r\n            color: #333;\r\n        }\r\n        p {\r\n            color: #555;\r\n            line-height: 1.6;\r\n        }\r\n        .product-image {\r\n            width: 100%;\r\n            max-width: 400px;\r\n            margin: 0 auto;\r\n            display: block;\r\n        }\r\n        .button {\r\n            display: inline-block;\r\n            background-color: red;\r\n            color: #fff;\r\n            text-decoration: none;\r\n            padding: 10px 20px;\r\n            border-radius: 5px;\r\n            margin-top: 20px;\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n    <div class=\"container\">\r\n        <h1>Yeni Ürün Duyurusu</h1>\r\n        <p>Merhaba,</p>\r\n        <p>Size harika bir haberimiz var! Yeni bir ürünümüz piyasaya sürüldü. Bu ürünü hemen keşfedin ve avantajlardan yararlanın.</p>\r\n        <img class=\"product-image\" src=\"product_image_url\" alt=\"Yeni Ürün\">\r\n        <p>Ürün hakkında daha fazla bilgi almak için aşağıdaki butona tıklayabilirsiniz.</p>\r\n        <a href=\"product_page_url\" class=\"button\">Ürünü Görüntüle</a>\r\n        <p>İyi alışverişler dileriz!</p>\r\n    </div>\r\n</body>\r\n</html>\r\n";
+    public ProductController(AppDbContext context, CloudinaryService cloudinaryService, MailKitHelper mailKitHelper)
     {
         _context = context;
         _cloudinaryService = cloudinaryService;
+        _mailKitHelper = mailKitHelper;
     }
 
     public async Task<IActionResult> Index()
@@ -27,7 +31,7 @@ public class ProductController : Controller
 
     public async Task<IActionResult> Create()
     {
-        var categories = await _context.Categories.Where(x=>x.ParentCategoryId!=null).ToListAsync();
+        var categories = await _context.Categories.Where(x => x.ParentCategoryId != null).ToListAsync();
         var colors = await _context.Colors.ToListAsync();
 
         ViewBag.Categories = categories;
@@ -132,6 +136,27 @@ public class ProductController : Controller
 
         await _context.Products.AddAsync(product);
         await _context.SaveChangesAsync();
+
+
+        var subscribes = await _context.Subscribes.ToListAsync();
+
+        messageBody = messageBody.Replace("product_image_url", product.BaseImagePath);
+        messageBody = messageBody.Replace("product_page_url", "https://www.rampage.com.tr/");
+        foreach (var user in subscribes)
+        {
+            await _mailKitHelper.SendEmailAsync(new()
+            {
+                Body = messageBody,
+                Subject = "Yeni Ürün Duyurusu",
+                ToEmail = user.Email
+
+            });
+
+        }
+
+
+
+
 
         return RedirectToAction("Index");
 
@@ -349,7 +374,7 @@ public class ProductController : Controller
     public async Task<IActionResult> CreateInfo(int id)
     {
         var isExistProduct = await _context.Products.AnyAsync(x => x.Id == id);
-        if (!isExistProduct) 
+        if (!isExistProduct)
             return NotFound();
 
         ProductInfoPostVM vm = new();
@@ -368,7 +393,7 @@ public class ProductController : Controller
         if (!isExistProduct)
             return NotFound();
 
-        var isExist=await _context.ProductInfos.AnyAsync(x=>x.ProductId==vm.ProductId && x.Key.ToLower()==vm.Key.ToLower());
+        var isExist = await _context.ProductInfos.AnyAsync(x => x.ProductId == vm.ProductId && x.Key.ToLower() == vm.Key.ToLower());
 
         if (isExist)
         {
@@ -377,7 +402,7 @@ public class ProductController : Controller
         }
 
 
-        ProductInfo info = new() { Key=vm.Key,Value=vm.Value,ProductId=vm.ProductId};
+        ProductInfo info = new() { Key = vm.Key, Value = vm.Value, ProductId = vm.ProductId };
 
         await _context.ProductInfos.AddAsync(info);
         await _context.SaveChangesAsync();

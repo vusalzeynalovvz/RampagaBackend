@@ -22,7 +22,7 @@ public class CategoryController : Controller
 
     public async Task<IActionResult> Index()
     {
-        var categoires = await _context.Categories.Include(x=>x.Products).ToListAsync();
+        var categoires = await _context.Categories.Include(x=>x.Products).Include(x=>x.ChildCategories).ToListAsync();
         return View(categoires);
     }
 

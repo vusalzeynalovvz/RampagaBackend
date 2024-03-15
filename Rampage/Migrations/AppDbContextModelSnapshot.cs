@@ -239,12 +239,23 @@ namespace Rampage.Migrations
                     b.Property<int>("Count")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsSale")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("OrderId")
+                        .HasColumnType("int");
+
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
+
+                    b.Property<decimal?>("StaticPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AppUserId");
+
+                    b.HasIndex("OrderId");
 
                     b.HasIndex("ProductId");
 
@@ -350,6 +361,81 @@ namespace Rampage.Migrations
                     b.ToTable("Colors");
                 });
 
+            modelBuilder.Entity("Rampage.Database.DomainModels.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("Rampage.Database.DomainModels.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("Rampage.Database.DomainModels.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -386,6 +472,12 @@ namespace Rampage.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SalesCount")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -469,6 +561,38 @@ namespace Rampage.Migrations
                     b.ToTable("Settings");
                 });
 
+            modelBuilder.Entity("Rampage.Database.DomainModels.Slider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Button")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sliders");
+                });
+
             modelBuilder.Entity("Rampage.Database.DomainModels.Subscribe", b =>
                 {
                     b.Property<int>("Id")
@@ -545,6 +669,10 @@ namespace Rampage.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Rampage.Database.DomainModels.Order", "Order")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("OrderId");
+
                     b.HasOne("Rampage.Database.DomainModels.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
@@ -552,6 +680,8 @@ namespace Rampage.Migrations
                         .IsRequired();
 
                     b.Navigation("AppUser");
+
+                    b.Navigation("Order");
 
                     b.Navigation("Product");
                 });
@@ -574,6 +704,36 @@ namespace Rampage.Migrations
                         .HasForeignKey("ParentCategoryId");
 
                     b.Navigation("ParentCategory");
+                });
+
+            modelBuilder.Entity("Rampage.Database.DomainModels.Comment", b =>
+                {
+                    b.HasOne("Rampage.Database.DomainModels.AppUser", "AppUser")
+                        .WithMany("Comments")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Rampage.Database.DomainModels.Product", "Product")
+                        .WithMany("Comments")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Rampage.Database.DomainModels.Order", b =>
+                {
+                    b.HasOne("Rampage.Database.DomainModels.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("Rampage.Database.DomainModels.Product", b =>
@@ -620,6 +780,8 @@ namespace Rampage.Migrations
             modelBuilder.Entity("Rampage.Database.DomainModels.AppUser", b =>
                 {
                     b.Navigation("BasketItems");
+
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("Rampage.Database.DomainModels.BlogCategory", b =>
@@ -639,8 +801,15 @@ namespace Rampage.Migrations
                     b.Navigation("Products");
                 });
 
+            modelBuilder.Entity("Rampage.Database.DomainModels.Order", b =>
+                {
+                    b.Navigation("BasketItems");
+                });
+
             modelBuilder.Entity("Rampage.Database.DomainModels.Product", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("ProductImages");
 
                     b.Navigation("ProductInfos");
